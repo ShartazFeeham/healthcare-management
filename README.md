@@ -44,3 +44,5 @@ This is a multi-aspect focused healthcare platform which offers both doctor and 
 - Medicine: **MED1** (MED + SerialNo + Random 2-digit number)
 - Equipment: **EQU1** (EQU + SerialNo + Random 2-digit number)
 - CDSS: **C-PSF1-1** (C-PatientID-SerialID)
+
+<!-- sync-marker-1 -->
