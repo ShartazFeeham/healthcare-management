@@ -32,6 +32,7 @@ import Notifications from "components/notification/Notifications";
 import SettingsPage from "components/notification/SettingsPage";
 import Search from "components/search/Search";
 import AdminDashboard from "components/admin-dashboard/Dashboard";
+import Mailbox from "components/mailbox/Mailbox";
 
 var routes = [
   {
@@ -39,6 +40,14 @@ var routes = [
     name: "Home",
     icon: "fa fa-home text-info",
     component: <Index />,
+    layout: "/common",
+    role: "",
+  },
+  {
+    path: "/mailbox",
+    name: "Local mailbox",
+    icon: "fa fa-envelope text-info",
+    component: <Mailbox />,
     layout: "/common",
     role: "",
   },
@@ -149,7 +158,7 @@ var routes = [
   },
   {
     path: "/doctors/edit-profile",
-    name: "Edic Profile",
+    name: "Edit Profile",
     icon: "fas fa-user-edit text-info",
     component: <EditDoctorProfile />,
     layout: "/health",
@@ -157,7 +166,7 @@ var routes = [
   },
   {
     path: "/patients/edit-profile",
-    name: "Edic Profile",
+    name: "Edit Profile",
     icon: "fas fa-user-edit text-pink",
     component: <EditPatientProfile />,
     layout: "/health",

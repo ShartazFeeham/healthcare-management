@@ -32,7 +32,7 @@ public class Remind {
             String appointmentOriginalTime = timeFormatter
                     .formatTo12HourFormat(appointment.getAppointmentTime().toLocalTime());
             String timeRemaining = timeFormatter.format(appointment.getAppointmentTime());
-            String url = "http://localhost:3000/health/patient";
+            String url = "http://localhost:3100/health/patient";
 
             NotificationRequest notification = NotificationRequest.builder()
                     .userId(userId)

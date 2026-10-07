@@ -1,0 +1,27 @@
+{
+ "generatedAt": "2026-10-06T18:04:27.525Z",
+ "system": {
+  "services": 15,
+  "doctors": 16,
+  "patients": 36,
+  "appointments": 2011,
+  "medicines": 40,
+  "equipment": 12,
+  "posts": 49,
+  "languages": 10
+ },
+ "code": {
+  "backendFiles": 462,
+  "backendLines": 16183,
+  "frontendFiles": 114,
+  "frontendLines": 17421,
+  "endpoints": 165,
+  "controllers": 41,
+  "entities": 26
+ },
+ "quality": {
+  "e2eChecks": 12,
+  "screens": 46,
+  "cloudDependencies": 0
+ }
+}

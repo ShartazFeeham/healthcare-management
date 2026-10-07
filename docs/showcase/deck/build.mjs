@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+// Renders index.html from tools/slides.mjs. The page works with JavaScript off (slides stack vertically).
+import { writeFileSync, readFileSync, readdirSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { SLIDES } from "./tools/slides.mjs";
+const ROOT = dirname(fileURLToPath(import.meta.url));
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const w = {}; new Function("window", readFileSync(join(ROOT, "../ward-round/js/data.js"), "utf8"))(w);
+const boot = w.ROUND.boot.filter((l) => /^\s*(✓|\d\))/.test(l)).slice(0, 22);
+const pad = (n) => String(n).padStart(2, "0");
+const slides = SLIDES.map((s, i) => `
+  <section class="slide ${s.layout} ${s.noDevice ? "no-device" : ""} ${s.big ? "big" : ""}" data-theme="${s.theme}" data-id="${s.id}" data-index="${i}" ${s.device ? `data-device="${s.device.join(",")}"` : ""} ${s.terminal ? 'data-terminal="1"' : ""} ${s.phraseDur ? `data-dur="${s.phraseDur}"` : ""} aria-roledescription="slide" aria-label="${i + 1} of ${SLIDES.length}: ${esc(s.topic)}">
+    <p class="meta"><span>${pad(i + 1)}</span>${esc(s.topic)}</p>
+    <div class="copy">
+      ${s.h ? `<h2>${esc(s.h)}</h2>` : ""}
+      ${s.phrases.length ? `<ul class="phrases">${s.phrases.map(([t, k, html], n) => `<li data-img="${k}" ${n === 0 ? 'class="first"' : ""}>${html ? t : esc(t)}</li>`).join("")}</ul>` : ""}
+      ${s.sub ? `<p class="sub">${esc(s.sub)}</p>` : ""}
+    </div>
+    ${s.terminal ? `<div class="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>docs/runner.sh</span></div><pre>$ ./docs/runner.sh 5\n${esc(boot.join("\n"))}</pre></div>` : ""}
+    ${s.device ? `<div class="device"></div>` : ""}
+    <aside class="notes">${esc(s.notes)}</aside>
+  </section>`).join("");
+const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EA Healthcare · presentation</title>
+<meta name="description" content="A minimal slide presentation of the EA Healthcare platform, shown on a Mac monitor or a phone depending on your device.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231c1c1e'/%3E%3Cpath d='M16 9v14M9 16h14' stroke='white' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/deck.css">
+</head>
+<body class="nojs">
+<script>document.body.className="js";</script>
+<div class="viewport" id="viewport"><main class="stage" id="stage">${slides}
+</main></div>
+<div class="ui" id="ui">
+  <div class="seg" role="group" aria-label="Device"><button type="button" id="dev-desktop" aria-pressed="true">Desktop</button><button type="button" id="dev-phone" aria-pressed="false">Phone</button></div>
+  <button type="button" class="icon" id="fs" aria-label="Fullscreen (F)" title="Fullscreen (F)">⤢</button>
+  <button type="button" class="icon" id="notes-btn" aria-label="Notes (N)" title="Notes (N)">≡</button>
+</div>
+<nav class="dots" id="dots" aria-label="Slides"></nav>
+<div class="count" id="count"></div>
+<div class="notes-bar" id="notes-bar" hidden></div>
+<div class="sr" id="live" aria-live="polite"></div>
+<noscript><style>.viewport{position:static;height:auto}.stage{position:static;transform:none!important;width:auto;height:auto}.slide{position:relative!important;opacity:1!important;transform:none!important;min-height:80vh;padding:40px 6vw}.phrases li{position:static!important;opacity:1!important;transform:none!important}.ui,.dots,.count{display:none}</style></noscript>
+<script src="js/deck.js"></script>
+</body>
+</html>
+`;
+writeFileSync(join(ROOT, "index.html"), html);
+console.log("index.html", Math.round(html.length / 1024) + " KB,", SLIDES.length, "slides");

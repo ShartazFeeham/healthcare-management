@@ -5,11 +5,11 @@ import { Input } from "reactstrap";
 
 const PhotoUpload = ({ url, setUrl }) => {
   const alternative =
-    "https://afeestorage.blob.core.windows.net/healthcare/be523c62-b0d1-4d81-a16d-53b355f3e1a8photoup.png";
+    "/img/local/photo-placeholder.svg";
   const [display, setDisplay] = useState();
   const [loading, setLoading] = useState(false);
   const loader =
-    "https://afeestorage.blob.core.windows.net/healthcare/5f7a39f7-2892-4c1b-a79c-b627b6c634a2loading1.gif";
+    "/img/local/spinner.svg";
   const [buttonText, setButtonText] = useState("Choose photo");
 
   const handleUpload = async (e) => {

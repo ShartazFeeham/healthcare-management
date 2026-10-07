@@ -15,6 +15,6 @@ export const medicineData = {
   nationalDrugCode: "1234567890",
   expirationDate: "2023-12-31",
   photo:
-    "https://cdn0.woolworths.media/content/wowproductimages/large/750755.jpg",
+    "/img/local/medicine-default.svg",
   alertMessage: "Keep out of reach of children and store in a cool, dry place.",
 };

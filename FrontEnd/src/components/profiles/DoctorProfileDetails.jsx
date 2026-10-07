@@ -1,4 +1,4 @@
-import doctorPersonalInfo from "assets/data/doctorprofile/doctorPersonalInfo";
+import AxiosInstance from "scripts/axioInstance";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
@@ -6,8 +6,14 @@ import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 export const DoctorProfileDetails = ({ doctorData }) => {
   const [personal, setPersonal] = useState(null);
   useEffect(() => {
-    setPersonal(doctorPersonalInfo);
-  }, [personal]);
+    if (!doctorData.doctorId) return;
+    AxiosInstance.get(`http://localhost:7200/doctors/${doctorData.doctorId}/personal-info`)
+      .then((response) => setPersonal(response.data))
+      .catch(() => setPersonal(null));
+  }, [doctorData.doctorId]);
+
+  // National ID numbers are only shown to the doctor themselves and to administrators.
+  const canSeeNid = ["ADMIN"].includes(localStorage.getItem("role")) || doctorData.doctorId === localStorage.getItem("userId");
 
   return (
     <>
@@ -98,7 +104,7 @@ export const DoctorProfileDetails = ({ doctorData }) => {
                   <Row>
                     <Col lg="6">
                       <i className="ni ni-building" /> Institute:{" "}
-                      {certification.institution} <br></br>
+                      {certification.issuingOrganization} <br></br>
                     </Col>
                     <Col lg="6">
                       <i className="ni ni-calendar-grid-58" /> Year:{" "}
@@ -119,7 +125,7 @@ export const DoctorProfileDetails = ({ doctorData }) => {
                   <Col md="6">Phone no: {personal.phone}</Col>
                 </Row>
                 <Row>
-                  <Col md="6">NID No: {personal.nidNo}</Col>
+                  <Col md="6">NID No: {canSeeNid ? personal.nidNo : "••••••••••"}</Col>
                   <Col md="6">Residence: {personal.residence}</Col>
                 </Row>
               </div>

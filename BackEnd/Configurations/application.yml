@@ -1,0 +1,18 @@
+# Shared configuration served by the Config Server (native profile, local files only).
+# Every microservice that connects to the Config Server picks this file up.
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    # Registry is polled less aggressively to keep local logs quiet.
+    registry-fetch-interval-seconds: 15
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
+spring:
+  jackson:
+    default-property-inclusion: non_null
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.cloud: WARN

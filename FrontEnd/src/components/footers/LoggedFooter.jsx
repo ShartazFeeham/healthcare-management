@@ -9,9 +9,9 @@ const Footer = () => {
             © {new Date().getFullYear()}{" "}
             <a
               className="font-weight-bold ml-1"
-              href="http://localhost:3000"
+              href="http://localhost:3100"
               rel="noopener noreferrer"
-              target="_blank"
+              
             >
               EA Healthcare
             </a>
@@ -22,9 +22,9 @@ const Footer = () => {
           <Nav className="nav-footer justify-content-center justify-content-xl-end">
             <NavItem>
               <NavLink
-                href="http://localhost:3000"
+                href="http://localhost:3100"
                 rel="noopener noreferrer"
-                target="_blank"
+                
               >
                 EA Healthcare
               </NavLink>
@@ -32,31 +32,31 @@ const Footer = () => {
 
             <NavItem>
               <NavLink
-                href="https://www.creative-tim.com/presentation?ref=adr-admin-footer"
+                href="/common/index"
                 rel="noopener noreferrer"
-                target="_blank"
+                
               >
-                About Us
+                Overview
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                href="http://blog.creative-tim.com?ref=adr-admin-footer"
+                href="/common/medicines"
                 rel="noopener noreferrer"
-                target="_blank"
+                
               >
-                Blog
+                Medicines
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink
-                href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-admin-footer"
+                href="/common/mailbox"
                 rel="noopener noreferrer"
-                target="_blank"
+                
               >
-                Contact
+                Local mailbox
               </NavLink>
             </NavItem>
           </Nav>

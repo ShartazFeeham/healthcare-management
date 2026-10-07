@@ -69,7 +69,7 @@ const EquipmentDetails = () => {
                   src={
                     medicineDetails.photoURL !== null
                       ? medicineDetails.photoURL
-                      : "https://afeestorage.blob.core.windows.net/healthcare/istockphoto-1136667772-612x612.jpg"
+                      : "/img/local/equipment-default.svg"
                   }
                   alt={medicineDetails.name}
                   style={{

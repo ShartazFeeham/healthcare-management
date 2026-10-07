@@ -9,3 +9,9 @@
 /BackEnd/idea
 /BackEnd/.idea
 /BackEnd/Configurations/.git
+/docs/.run
+/docs/showcase/node_modules
+/docs/seeder/last-run.json
+.DS_Store
+/docs/.run
+/docs/tests/last-run.json

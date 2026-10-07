@@ -5,7 +5,7 @@ import AxiosInstance from "scripts/axioInstance";
 
 const Status = () => {
   const [status, setStatus] = useState([]);
-  const [page, setPage] = useState([]);
+  const [page, setPage] = useState(0);
   const [isEnded, setIsEnded] = useState(false);
   const size = 7;
   const sortedReverse = true;

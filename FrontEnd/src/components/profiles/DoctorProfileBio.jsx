@@ -11,6 +11,7 @@ export const DoctorProfileBio = ({ doctorData }) => {
   const [treatmentsCount, setTreatmentsCount] = useState(0);
 
   useEffect(() => {
+    if (!doctorData.doctorId) return; // profile still loading
     AxiosInstance.get(
       `http://localhost:7400/reviews/doctor/count/${doctorData.doctorId}`
     )
@@ -29,7 +30,7 @@ export const DoctorProfileBio = ({ doctorData }) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [doctorData.doctorId]);
 
   return (
     <>
@@ -89,6 +90,9 @@ export const DoctorProfileBio = ({ doctorData }) => {
             <p>
               <Translate text={doctorData.bio} />
             </p>
+            <hr className="my-4" />
+            <h6 className="heading-small text-muted">Upcoming availability</h6>
+            <DoctorProfileAvailability doctorId={doctorData.doctorId} />
           </div>
         </CardBody>
       </Card>

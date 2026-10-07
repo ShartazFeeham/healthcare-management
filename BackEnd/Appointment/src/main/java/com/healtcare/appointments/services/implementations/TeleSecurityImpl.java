@@ -33,10 +33,9 @@ public class TeleSecurityImpl implements TeleSecurityService {
             throw new AccessDeniedException("You can not join someone else's appointment!");
         }
 
-        // If attempt to joining time is within 5 minutes before or 20 minutes after appointment time, then allow.
-        // In reverse, if joining time is before 5 minutes or after 20 minutes of appointment time, then prohibit.
-        if (appointmentTime.isBefore(now.minusMinutes(5)) || appointmentTime.isAfter(now.plusMinutes(20))) {
-            throw new AccessDeniedException("You can only join within 5 minutes before or a few minutes after the appointment time starts.");
+        // Joining is allowed from 5 minutes before the (delay-adjusted) start until 20 minutes after it.
+        if (now.isBefore(appointmentTime.minusMinutes(5)) || now.isAfter(appointmentTime.plusMinutes(20))) {
+            throw new AccessDeniedException("You can only join from 5 minutes before until 20 minutes after the appointment time starts.");
         }
     }
 }

@@ -100,7 +100,7 @@ public class CommentServiceImpl implements CommentService {
                 .type("COMMUNITY")
                 .suffix("Visit the post to see the more")
                 .userId(postAuthor)
-                .url("http://localhost:3000/health/community/post/" + comment.getParentPost().getPostId())
+                .url("http://localhost:3100/health/community/post/" + comment.getParentPost().getPostId())
                 .build();
         if(comment.getParentPost().getPhotoURL() != null && !comment.getParentPost().getPhotoURL().isEmpty()){
             notificationRequest.setPhotoUrl(comment.getParentPost().getPhotoURL());
@@ -118,7 +118,7 @@ public class CommentServiceImpl implements CommentService {
                 .type("COMMUNITY")
                 .suffix("Visit the post to see the more")
                 .userId(commentAuthor)
-                .url("http://localhost:3000/health/community/post/" + comment.getParentPost().getPostId())
+                .url("http://localhost:3100/health/community/post/" + comment.getParentPost().getPostId())
                 .build();
         if(comment.getParentPost().getPhotoURL() != null && !comment.getParentPost().getPhotoURL().isEmpty()){
             notificationRequest.setPhotoUrl(comment.getParentPost().getPhotoURL());

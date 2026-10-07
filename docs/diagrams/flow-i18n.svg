@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 450" width="1200" height="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1626"/><stop offset="1" stop-color="#14263f"/></linearGradient>
+<radialGradient id="glow" cx=".15" cy=".1" r=".9"><stop offset="0" stop-color="#3d8bff" stop-opacity=".22"/><stop offset="1" stop-color="#3d8bff" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="450" rx="22" fill="url(#bg)"/><rect width="1200" height="450" rx="22" fill="url(#glow)"/>
+<text x="30" y="40" fill="#e8f0ff" font-size="21" font-weight="800">Interface translation that works offline</text>
+<text x="30" y="62" fill="#8ea6c9" font-size="13">Pre-translated dictionary first; the translator is an optional extra for user-written text</text>
+
+<path id="e-e1" d="M250 185 L360 185" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e2" d="M470 220 L470 300" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e3" d="M580 185 L700 185" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e4" d="M920 185 L990 185" fill="none" stroke="#ff5c5c" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="n-spa">
+      <rect id="halo-spa" x="35" y="145" width="220" height="80" rx="17" fill="#3d8bff" opacity="0"/>
+      <rect x="40" y="150" width="210" height="70" rx="13" fill="#16263d" stroke="#3d8bff" stroke-width="1.6"/>
+      <circle cx="66" cy="185" r="17" fill="#3d8bff" fill-opacity=".16"/>
+      <g transform="translate(54 173) scale(1)" fill="none" stroke="#3d8bff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 9h19"/><circle cx="5.5" cy="6.5" r=".6"/><circle cx="8" cy="6.5" r=".6"/></g>
+      <text x="92" y="182" fill="#e8f0ff" font-size="14" font-weight="700">React SPA</text>
+      <text x="92" y="199" fill="#8ea6c9" font-size="11">text(tag, default)</text>
+    </g>
+<g id="n-i18n">
+      <rect id="halo-i18n" x="355" y="145" width="230" height="80" rx="17" fill="#3d8bff" opacity="0"/>
+      <rect x="360" y="150" width="220" height="70" rx="13" fill="#16263d" stroke="#3d8bff" stroke-width="1.6"/>
+      <circle cx="386" cy="185" r="17" fill="#3d8bff" fill-opacity=".16"/>
+      <g transform="translate(374 173) scale(1)" fill="none" stroke="#3d8bff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g>
+      <text x="412" y="182" fill="#e8f0ff" font-size="14" font-weight="700">I18N service</text>
+      <text x="412" y="199" fill="#8ea6c9" font-size="11">resources · translations</text>
+    </g>
+<g id="n-db">
+      <rect id="halo-db" x="355" y="295" width="230" height="80" rx="17" fill="#4cd964" opacity="0"/>
+      <rect x="360" y="300" width="220" height="70" rx="13" fill="#16263d" stroke="#4cd964" stroke-width="1.6"/>
+      <circle cx="386" cy="335" r="17" fill="#4cd964" fill-opacity=".16"/>
+      <g transform="translate(374 323) scale(1)" fill="none" stroke="#4cd964" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+      <text x="412" y="332" fill="#e8f0ff" font-size="14" font-weight="700">MySQL · i18n</text>
+      <text x="412" y="349" fill="#8ea6c9" font-size="11">10 languages × 33 strings</text>
+    </g>
+<g id="n-int">
+      <rect id="halo-int" x="695" y="145" width="230" height="80" rx="17" fill="#9a7bff" opacity="0"/>
+      <rect x="700" y="150" width="220" height="70" rx="13" fill="#16263d" stroke="#9a7bff" stroke-width="1.6"/>
+      <circle cx="726" cy="185" r="17" fill="#9a7bff" fill-opacity=".16"/>
+      <g transform="translate(714 173) scale(1)" fill="none" stroke="#9a7bff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6.5" rx="2"/><rect x="3" y="13.5" width="18" height="6.5" rx="2"/><circle cx="7" cy="7.2" r=".8"/><circle cx="7" cy="16.8" r=".8"/></g>
+      <text x="752" y="182" fill="#e8f0ff" font-size="14" font-weight="700">Integration service</text>
+      <text x="752" y="199" fill="#8ea6c9" font-size="11">translator client</text>
+    </g>
+<g id="n-g">
+      <rect id="halo-g" x="985" y="145" width="180" height="80" rx="17" fill="#ff5c5c" opacity="0"/>
+      <rect x="990" y="150" width="170" height="70" rx="13" fill="#16263d" stroke="#ff5c5c" stroke-width="1.6" stroke-dasharray="6 4"/>
+      <circle cx="1016" cy="185" r="17" fill="#ff5c5c" fill-opacity=".16"/>
+      <g transform="translate(1004 173) scale(1)" fill="none" stroke="#ff5c5c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g>
+      <text x="1042" y="182" fill="#e8f0ff" font-size="14" font-weight="700">Google Translate</text>
+      <text x="1042" y="199" fill="#8ea6c9" font-size="11">optional · online</text>
+    </g>
+<path d="M250 185 L360 185" fill="none" stroke="#3d8bff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.01154;0.2;0.21154;1" dur="10.4s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#3d8bff" opacity="0"><animateMotion dur="10.4s" repeatCount="indefinite" path="M250 185 L360 185" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.00962;0.19231;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.01154;0.2;0.21154;1" dur="10.4s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="305" cy="185" r="11" fill="#3d8bff"/><text x="305" y="189.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">1</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.01154;0.2;0.21154;1" dur="10.4s" repeatCount="indefinite" /></g>
+<use href="#halo-i18n" opacity="0" style="fill:#3d8bff"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0;0.01154;0.2;0.21154;1" dur="10.4s" repeatCount="indefinite" /></use>
+<path d="M470 220 L470 300" fill="none" stroke="#4cd964" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.21154;0.22308;0.41154;0.42308;1" dur="10.4s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#4cd964" opacity="0"><animateMotion dur="10.4s" repeatCount="indefinite" path="M470 220 L470 300" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.22115;0.40385;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.21154;0.22308;0.41154;0.42308;1" dur="10.4s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="470" cy="260" r="11" fill="#4cd964"/><text x="470" y="264.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">2</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.21154;0.22308;0.41154;0.42308;1" dur="10.4s" repeatCount="indefinite" /></g>
+<use href="#halo-db" opacity="0" style="fill:#4cd964"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.21154;0.22308;0.41154;0.42308;1" dur="10.4s" repeatCount="indefinite" /></use>
+<path d="M580 185 L700 185" fill="none" stroke="#9a7bff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42308;0.43462;0.62308;0.63462;1" dur="10.4s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#9a7bff" opacity="0"><animateMotion dur="10.4s" repeatCount="indefinite" path="M580 185 L700 185" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.43269;0.61538;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42308;0.43462;0.62308;0.63462;1" dur="10.4s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="640" cy="185" r="11" fill="#9a7bff"/><text x="640" y="189.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">3</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42308;0.43462;0.62308;0.63462;1" dur="10.4s" repeatCount="indefinite" /></g>
+<use href="#halo-int" opacity="0" style="fill:#9a7bff"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.42308;0.43462;0.62308;0.63462;1" dur="10.4s" repeatCount="indefinite" /></use>
+<path d="M920 185 L990 185" fill="none" stroke="#ff5c5c" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.63462;0.64615;0.83462;0.84615;1" dur="10.4s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#ff5c5c" opacity="0"><animateMotion dur="10.4s" repeatCount="indefinite" path="M920 185 L990 185" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.64423;0.82692;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.63462;0.64615;0.83462;0.84615;1" dur="10.4s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="955" cy="185" r="11" fill="#ff5c5c"/><text x="955" y="189.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">4</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.63462;0.64615;0.83462;0.84615;1" dur="10.4s" repeatCount="indefinite" /></g>
+<use href="#halo-g" opacity="0" style="fill:#ff5c5c"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.63462;0.64615;0.83462;0.84615;1" dur="10.4s" repeatCount="indefinite" /></use>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#16263d" stroke="#3d8bff" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#3d8bff"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">1</text><text x="82" y="413" font-size="14" fill="#e8f0ff">On load the app fetches the whole dictionary once, then picks the user's language (e.g. Bengali).</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.01154;0.2;0.21154;1" dur="10.4s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#16263d" stroke="#4cd964" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#4cd964"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">2</text><text x="82" y="413" font-size="14" fill="#e8f0ff">The seeder pre-loaded every interface string in ten languages, so no internet is required.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.21154;0.22308;0.41154;0.42308;1" dur="10.4s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#16263d" stroke="#9a7bff" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#9a7bff"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">3</text><text x="82" y="413" font-size="14" fill="#e8f0ff">Only a string that is missing from the dictionary is sent to the translator integration ...</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42308;0.43462;0.62308;0.63462;1" dur="10.4s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#16263d" stroke="#ff5c5c" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#ff5c5c"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">4</text><text x="82" y="413" font-size="14" fill="#e8f0ff">... and only when the machine is online. When offline it fails fast and the English text is kept.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.63462;0.64615;0.83462;0.84615;1" dur="10.4s" repeatCount="indefinite" /></g>
+</svg>

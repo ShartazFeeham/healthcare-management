@@ -27,13 +27,6 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
-	// Twilio
-	implementation group: 'com.twilio.sdk', name: 'twilio', version: '7.15.6'
-	// Mail sender
-	implementation 'org.springframework.boot:spring-boot-starter-mail'
-	// Azure email
-	implementation group: 'com.azure', name: 'azure-communication-email', version: '1.0.2'
-
 	// Microservice env dependencies
 	implementation 'org.springframework.cloud:spring-cloud-starter'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'

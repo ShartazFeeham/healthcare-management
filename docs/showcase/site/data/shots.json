@@ -1,0 +1,462 @@
+[
+ {
+  "id": "pub-01-home",
+  "file": "assets/shots/pub-01-home.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Landing page",
+  "caption": "A calm, patient-first front door: what the platform offers, who it is for, and one click to sign in or register.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-02-login",
+  "file": "assets/shots/pub-02-login.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Sign in",
+  "caption": "Email or user ID with password; accounts with two-factor enabled are asked for a one-time code.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-03-login-bn",
+  "file": "assets/shots/pub-03-login-bn.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Interface in Bengali",
+  "caption": "The UI is translated per user. Strings come from the i18n service, pre-translated so it also works offline.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-04-register-patient",
+  "file": "assets/shots/pub-04-register-patient.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Patient registration",
+  "caption": "Self-service sign-up with validation; a verification code is sent before the account unlocks.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-05-register-doctor",
+  "file": "assets/shots/pub-05-register-doctor.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Doctor onboarding",
+  "caption": "Doctors submit qualifications, certifications and license details; an administrator approves the account before first use.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-06-forgot",
+  "file": "assets/shots/pub-06-forgot.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Password recovery",
+  "caption": "OTP-based reset flow with a resend timer.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-07-mailbox",
+  "file": "assets/shots/pub-07-mailbox.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Local mailbox",
+  "caption": "Offline stand-in for email, SMS and push providers: every message the platform sends is captured and shown here, OTP codes highlighted.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-08-medicines",
+  "file": "assets/shots/pub-08-medicines.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Medicine library",
+  "caption": "Searchable, sortable catalogue with expiry filters, 40 medicines with warnings and adverse effects.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-09-medicine-detail",
+  "file": "assets/shots/pub-09-medicine-detail.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Medicine details",
+  "caption": "Classification, strength, warnings, adverse effects and manufacturer in one view.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-10-equipments",
+  "file": "assets/shots/pub-10-equipments.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Hospital equipment",
+  "caption": "Diagnostic and treatment equipment with availability and costing, bookable ahead of time.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-11-equipment-detail",
+  "file": "assets/shots/pub-11-equipment-detail.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Equipment details",
+  "caption": "Use cases, technical details, warnings and costing.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pub-12-search",
+  "file": "assets/shots/pub-12-search.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Unified search",
+  "caption": "One query fans out to patients, doctors, medicines, appointments and community posts through the help-desk service.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-01-dashboard",
+  "file": "assets/shots/adm-01-dashboard.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Admin dashboard",
+  "caption": "Walk-in appointments, doctor rooms, user management and statistics behind one tabbed console.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-02-rooms",
+  "file": "assets/shots/adm-02-rooms.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Room allocation",
+  "caption": "Assign every doctor a consultation room; patients see the room on their appointment.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-03-doctors",
+  "file": "assets/shots/adm-03-doctors.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Doctor management",
+  "caption": "Approve, deactivate or review doctors; new doctors stay inactive until an administrator verifies them.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-04-patients",
+  "file": "assets/shots/adm-04-patients.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Patient management",
+  "caption": "Browse patients, open their health data and manage account status.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-05-statistics",
+  "file": "assets/shots/adm-05-statistics.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Operational statistics",
+  "caption": "Appointment volume per day, shift distribution and consultation types, computed in the appointment service.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-06-walkin",
+  "file": "assets/shots/adm-06-walkin.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Walk-in booking",
+  "caption": "The front desk books in-person visits for unregistered patients.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-07-create-admin",
+  "file": "assets/shots/adm-07-create-admin.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Create administrator",
+  "caption": "Administrators are created by existing administrators only.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-08-create-medicine",
+  "file": "assets/shots/adm-08-create-medicine.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Add a medicine",
+  "caption": "Full pharmacological record with photo upload to the local file service.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-09-create-equipment",
+  "file": "assets/shots/adm-09-create-equipment.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Add equipment",
+  "caption": "Equipment records with use cases, warnings and pricing.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-10-community",
+  "file": "assets/shots/adm-10-community.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Community moderation",
+  "caption": "Admins can publish announcements and FAQs and remove any post.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "adm-11-settings",
+  "file": "assets/shots/adm-11-settings.jpg",
+  "group": "admin",
+  "role": "admin",
+  "title": "Notification and language settings",
+  "caption": "Per-user channel preferences (email, SMS, push), do-not-disturb and interface language.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-01-dashboard",
+  "file": "assets/shots/doc-01-dashboard.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Doctor dashboard",
+  "caption": "Today's queue: upcoming in-person and telemedicine consultations with join-call buttons, and completed visits.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-02-schedule",
+  "file": "assets/shots/doc-02-schedule.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Schedule management",
+  "caption": "Pick a day, choose in-person, telemedicine or off for each shift and set the capacity per slot.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-03-profile",
+  "file": "assets/shots/doc-03-profile.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Public doctor profile",
+  "caption": "Bio, qualifications, certifications, availability for the next days and verified patient reviews.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-04-edit-profile",
+  "file": "assets/shots/doc-04-edit-profile.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Edit profile",
+  "caption": "Doctors maintain their own bio, specialization and credentials.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-05-treatment",
+  "file": "assets/shots/doc-05-treatment.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Write a treatment record",
+  "caption": "Structured treatment notes that feed the clinical decision support engine.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-06-patients",
+  "file": "assets/shots/doc-06-patients.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Patient directory",
+  "caption": "Doctors can open any patient's health profile and history.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-07-patient-record",
+  "file": "assets/shots/doc-07-patient-record.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Patient record with AI analysis",
+  "caption": "Health data, treatment history and the AI-assisted analysis in one place.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-08-community",
+  "file": "assets/shots/doc-08-community.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Articles and first aid",
+  "caption": "Doctors publish articles and first-aid guides for the whole community.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "doc-09-call",
+  "file": "assets/shots/doc-09-call.jpg",
+  "group": "doctor",
+  "role": "doctor",
+  "title": "Telemedicine call",
+  "caption": "Peer-to-peer WebRTC video room, access verified against the appointment window. Works with no cloud video service.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-01-dashboard",
+  "file": "assets/shots/pat-01-dashboard.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Patient dashboard",
+  "caption": "Upcoming and completed appointments with room numbers, plus wellness challenges.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-02-challenges",
+  "file": "assets/shots/pat-02-challenges.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Wellness challenges",
+  "caption": "Gamified goals set by administrators; patients log daily scores and earn badges.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-03-find-doctor",
+  "file": "assets/shots/pat-03-find-doctor.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Find a doctor",
+  "caption": "Filter 30 specializations, see experience, treatments and availability at a glance.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-04-book",
+  "file": "assets/shots/pat-04-book.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Pick a slot",
+  "caption": "Choose a day within the next ten days and a morning, afternoon or evening slot, with live capacity and delay information.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-05-profile",
+  "file": "assets/shots/pat-05-profile.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Health profile",
+  "caption": "Vitals, allergies, lifestyle flags, treatments and achievements in one profile.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-06-ai-report",
+  "file": "assets/shots/pat-06-ai-report.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "AI health analysis",
+  "caption": "A three-part report on the treatment history, comparable anonymised cases and what to do next. Generated on the platform's own server.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-07-edit-profile",
+  "file": "assets/shots/pat-07-edit-profile.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Edit health profile",
+  "caption": "Update vitals, allergies and contact info, with photo upload.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-08-community",
+  "file": "assets/shots/pat-08-community.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Community feed",
+  "caption": "Status posts, doctor-written articles, first-aid guides and FAQs, with reactions and comments.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-09-post",
+  "file": "assets/shots/pat-09-post.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Post and discussion",
+  "caption": "Threaded comments with doctor replies, and one-click translation of any post.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-10-notifications",
+  "file": "assets/shots/pat-10-notifications.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Notifications",
+  "caption": "Appointment reminders, community activity and site announcements, with unread tracking.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-11-settings",
+  "file": "assets/shots/pat-11-settings.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Settings",
+  "caption": "Choose notification channels and the interface language.",
+  "tags": [],
+  "mobile": false
+ },
+ {
+  "id": "pat-12-mobile-dashboard",
+  "file": "assets/shots/pat-12-mobile-dashboard.jpg",
+  "group": "patient",
+  "role": "patient",
+  "title": "Responsive on mobile",
+  "caption": "The same dashboard on a phone-sized screen.",
+  "tags": [],
+  "mobile": true
+ },
+ {
+  "id": "pat-13-mobile-login",
+  "file": "assets/shots/pat-13-mobile-login.jpg",
+  "group": "public",
+  "role": "public",
+  "title": "Mobile sign-in",
+  "caption": "Sign-in on a small screen.",
+  "tags": [],
+  "mobile": true
+ },
+ {
+  "id": "ops-01-eureka",
+  "file": "assets/shots/ops-01-eureka.jpg",
+  "group": "ops",
+  "role": "public",
+  "title": "Service registry",
+  "caption": "Spring Cloud Eureka showing the microservices registered and healthy.",
+  "tags": [],
+  "mobile": false
+ }
+]

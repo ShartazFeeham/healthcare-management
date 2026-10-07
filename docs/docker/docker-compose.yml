@@ -1,0 +1,29 @@
+# Local-only infrastructure for the Healthcare Management System.
+# Everything binds to 127.0.0.1 - nothing here talks to the internet.
+name: healthcare
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: healthcare-mysql
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: healthcare_root
+      MYSQL_USER: healthcare
+      MYSQL_PASSWORD: healthcare
+    command: >
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+      --default-time-zone=+00:00
+      --max-connections=400
+    volumes:
+      - healthcare-mysql-data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-phealthcare_root"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+volumes:
+  healthcare-mysql-data:

@@ -24,7 +24,7 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("http://localhost:3100");
         config.addAllowedHeader("*");
         config.addAllowedMethod("GET");
         config.addAllowedMethod("POST");
@@ -47,19 +47,20 @@ public class SecurityConfig {
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth->{
                     auth
+                            // Order matters: the specific internal-only rule must come before the broad permitAll.
+                            .requestMatchers(HttpMethod.GET, "/access/getEmail/{userId}").hasRole("INTERNAL")
                             .requestMatchers(HttpMethod.POST, "/access/**").permitAll()
                             .requestMatchers(HttpMethod.GET, "/access/**").permitAll()
-                            .requestMatchers(HttpMethod.GET, "/access//getEmail/{userId}").hasRole("INTERNAL")
 
                             .requestMatchers(HttpMethod.GET, "/account/**").authenticated()
                             .requestMatchers(HttpMethod.POST, "/account/create-account").hasRole("INTERNAL")
                             .requestMatchers(HttpMethod.POST, "/account/create-admin-account").hasAnyRole("INTERNAL", "ADMIN")
 
                             .requestMatchers(HttpMethod.PUT, "/status/toggle-two-factor/{status}").authenticated()
-                            .requestMatchers(HttpMethod.PUT, "/status/toggle-deactivation/{status}").hasRole("ADMIN")
+                            .requestMatchers(HttpMethod.PUT, "/status/toggle-deactivation/{userId}/{status}").hasRole("ADMIN")
                             .requestMatchers(HttpMethod.PUT, "/status/toggle-lockout/{userId}/{status}").hasAnyRole("INTERNAL", "ADMIN")
                             .requestMatchers(HttpMethod.PUT, "/status/toggle-enabling/{userId}/{status}").hasAnyRole("INTERNAL", "ADMIN")
-                            .requestMatchers(HttpMethod.PUT, "/status/suspend/**").hasAnyRole("INTERNAL", "ADMIN")
+                            .requestMatchers(HttpMethod.PUT, "/status/toggle-suspension/**").hasAnyRole("INTERNAL", "ADMIN")
                             .requestMatchers(HttpMethod.PUT, "/status/add-ban-hour/**").hasAnyRole("INTERNAL", "ADMIN")
 
                             .requestMatchers(HttpMethod.PUT, "/recovery/change-password").authenticated()

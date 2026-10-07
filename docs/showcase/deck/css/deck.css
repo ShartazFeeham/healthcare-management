@@ -1,0 +1,101 @@
+/* Minimal, calm deck. System fonts only. One accent. Stage is 1920x1080 (landscape) or 1080x1920 (portrait), scaled to fit. */
+:root {
+  --bg: #f4f3ef; --ink: #1c1c1e; --muted: #86868b; --line: rgba(28,28,30,.12); --accent: #0b7f76;
+  --dbg: #101113; --dink: #f5f5f7; --dmuted: #8e8e93; --dline: rgba(245,245,247,.14); --daccent: #4fd1c5;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI Variable Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace; --ease: cubic-bezier(.22,.8,.2,1);
+}
+* { box-sizing: border-box; } html, body { margin: 0; height: 100%; background: var(--bg); overflow: hidden; }
+body { font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.viewport { position: fixed; inset: 0; overflow: hidden; background: var(--bg); transition: background .6s; } .viewport.dark { background: var(--dbg); }
+.stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: center center; }
+.portrait .stage { width: 1080px; height: 1920px; }
+
+/* slides: states are relative to the current one, so going back plays the mirror image */
+.slide { position: absolute; inset: 0; color: var(--ink); visibility: hidden; transition: visibility 0s .9s; }
+.slide[data-theme="dark"] { color: var(--dink); }
+.slide[data-state="active"] { visibility: visible; transition-delay: 0s; } .slide[data-state="prev"], .slide[data-state="next"] { visibility: visible; pointer-events: none; }
+.slide .copy, .slide .device, .slide .term, .slide .meta { transition: transform 1s var(--ease), opacity .7s ease; }
+.slide[data-state="prev"] .copy, .slide[data-state="prev"] .meta { transform: translateX(-140px); opacity: 0; } .slide[data-state="next"] .copy, .slide[data-state="next"] .meta { transform: translateX(140px); opacity: 0; }
+.slide[data-state="prev"] .device, .slide[data-state="prev"] .term { transform: translateX(-260px); opacity: 0; } .slide[data-state="next"] .device, .slide[data-state="next"] .term { transform: translateX(260px); opacity: 0; }
+.slide[data-state="active"] .device, .slide[data-state="active"] .term { transition-delay: .12s; } .slide[data-state="active"] .copy { transition-delay: .05s; }
+.slide[data-state="prev"] .copy, .slide[data-state="prev"] .device { transition-duration: .7s; } /* leave a little faster than we arrive */
+
+.meta { position: absolute; left: 140px; top: 96px; margin: 0; font: 500 26px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 22px; }
+.slide[data-theme="dark"] .meta { color: var(--dmuted); } .meta span { color: var(--accent); } .slide[data-theme="dark"] .meta span { color: var(--daccent); }
+
+/* copy */
+.notes { display: none; }
+.copy { position: absolute; left: 140px; top: 50%; width: 640px; transform: translateY(-50%); } .slide[data-state="prev"] .copy { transform: translate(-140px, -50%); } .slide[data-state="next"] .copy { transform: translate(140px, -50%); }
+.slide.right .copy { left: auto; right: auto; left: 140px; } /* text stays left on landscape; the device alternates side */
+h2 { font-size: 92px; line-height: 1.02; letter-spacing: -.035em; font-weight: 650; margin: 0 0 56px; text-wrap: balance; }
+.phrases { list-style: none; margin: 0; padding: 0; position: relative; height: 190px; }
+.phrases li { position: absolute; left: 0; right: 0; top: 0; font-size: 52px; line-height: 1.16; letter-spacing: -.02em; color: var(--accent); font-weight: 500; opacity: 0; transform: translateX(90px); transition: transform .8s var(--ease), opacity .6s ease; }
+.slide[data-theme="dark"] .phrases li { color: var(--daccent); }
+.phrases li.in { opacity: 1; transform: none; } .phrases li.out { opacity: 0; transform: translateX(-110px); transition-duration: .55s; }
+.sub { font-size: 34px; color: var(--muted); margin: 18px 0 0; letter-spacing: -.01em; } .slide[data-theme="dark"] .sub { color: var(--dmuted); }
+.phrases s { display: block; color: var(--dmuted); text-decoration-thickness: 2px; font-size: 38px; margin-bottom: 8px; } .phrases b { display: block; font-weight: 600; color: var(--dink); }
+.slide.center .copy { left: 0; right: 0; width: auto; text-align: center; padding: 0 140px; } .slide.center .phrases { height: 260px; } .slide.center .phrases li { text-align: center; }
+.slide.center h2 { font-size: 120px; margin-bottom: 40px; } .slide.center .copy { padding: 0 200px; }
+.slide.big .phrases { height: 340px; } .slide.big .phrases li { font-size: 70px; color: var(--dmuted); } .slide.big .phrases b { display: inline; font-size: 280px; letter-spacing: -.06em; line-height: 1; margin-right: 24px; font-weight: 650; }
+.slide[data-id="madetrue"] .phrases li { font-size: 60px; color: var(--dink); }
+
+/* devices */
+.device { position: absolute; top: 50%; right: 100px; width: 1060px; height: 900px; margin-top: -450px; display: grid; place-items: center; }
+.slide.left .device { right: 100px; } .slide.right .device { right: 100px; }
+.slide.left .copy { left: 140px; } .slide.right .copy { left: 140px; }
+/* alternate the side on every other slide */
+.slide:nth-of-type(even) .copy { left: auto; right: 140px; } .slide:nth-of-type(even) .device { right: auto; left: 100px; }
+.slide:nth-of-type(even) .meta { left: auto; right: 140px; } .slide:nth-of-type(even) .copy { text-align: left; }
+.slide.center .copy, .slide.center .meta { left: 0 !important; right: 0 !important; } .slide.center .meta { left: 140px !important; right: auto !important; }
+.mac { width: 960px; transform-origin: center; } .mac .glass { padding: 14px; border-radius: 30px; background: linear-gradient(180deg, #e9e9ec, #d6d6da); box-shadow: 0 1px 0 rgba(255,255,255,.7) inset, 0 40px 80px -30px rgba(20,20,25,.45), 0 12px 24px -12px rgba(20,20,25,.25); }
+.mac .screen { position: relative; aspect-ratio: 1440 / 900; border-radius: 16px; overflow: hidden; background: #0a0a0b; border: 10px solid #0a0a0b; } .mac .screen .inner { position: absolute; inset: 0; border-radius: 6px; overflow: hidden; background: #fff; }
+.mac .neck { width: 150px; height: 70px; margin: -2px auto 0; background: linear-gradient(90deg, #cfcfd3, #ececef 50%, #cfcfd3); clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%); }
+.mac .base { width: 340px; height: 16px; margin: -1px auto 0; border-radius: 4px 4px 12px 12px; background: linear-gradient(180deg, #e2e2e6, #bdbdc2); box-shadow: 0 18px 30px -12px rgba(20,20,25,.4); }
+.slide[data-theme="dark"] .mac .glass { background: linear-gradient(180deg, #4a4a4f, #2b2b2f); box-shadow: 0 1px 0 rgba(255,255,255,.12) inset, 0 40px 80px -30px rgba(0,0,0,.8); } .slide[data-theme="dark"] .mac .neck { background: linear-gradient(90deg, #2a2a2e, #4b4b50 50%, #2a2a2e); } .slide[data-theme="dark"] .mac .base { background: linear-gradient(180deg, #4a4a4f, #2a2a2e); }
+.phone { width: 440px; height: 919px; position: relative; border-radius: 76px; padding: 14px; background: linear-gradient(145deg, #3a3a3e, #131315); box-shadow: 0 0 0 2px #6b6b70 inset, 0 40px 90px -30px rgba(20,20,25,.55), 0 14px 28px -14px rgba(20,20,25,.35); }
+.phone .screen { position: relative; width: 100%; height: 100%; border-radius: 62px; overflow: hidden; background: #fff; } .phone .island { position: absolute; z-index: 3; left: 50%; top: 14px; width: 118px; height: 33px; margin-left: -59px; border-radius: 20px; background: #050506; }
+.phone::before, .phone::after { content: ""; position: absolute; width: 4px; background: #4a4a4f; border-radius: 2px; } .phone::before { left: -4px; top: 190px; height: 70px; } .phone::after { right: -4px; top: 250px; height: 110px; }
+.screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; opacity: 0; transform: scale(1.015); transition: opacity .7s ease, transform 1.2s var(--ease); } .screen img.on { opacity: 1; transform: none; }
+.phone-mode .device { width: 560px; right: 190px; } .phone-mode .slide:nth-of-type(even) .device { right: auto; left: 190px; }
+
+/* terminal slide */
+.term { position: absolute; top: 50%; right: 130px; width: 980px; height: 720px; margin-top: -360px; border-radius: 24px; background: #121315; color: #d9e2e4; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(20,20,25,.45); } .slide:nth-of-type(even) .term { right: auto; left: 110px; }
+.term .bar { display: flex; gap: 9px; align-items: center; padding: 18px 22px; background: #1b1c1f; font: 22px var(--mono); color: #8a949a; } .term .bar i { width: 15px; height: 15px; border-radius: 50%; background: #3a3d42; } .term .bar span { margin-left: 14px; }
+.term pre { margin: 0; padding: 26px 30px; font: 24px/1.5 var(--mono); height: 640px; overflow: hidden; white-space: pre-wrap; } .term pre .line { display: block; opacity: 0; transform: translateX(26px); transition: opacity .35s, transform .5s var(--ease); } .term pre .line.on { opacity: 1; transform: none; } .term .p { color: #4fd1c5; }
+
+/* chrome */
+.ui { position: fixed; top: 18px; right: 18px; z-index: 20; display: flex; gap: 8px; align-items: center; transition: opacity .4s; } .ui.hide, .dots.hide, .count.hide { opacity: 0; pointer-events: none; }
+.seg { display: inline-flex; padding: 3px; border-radius: 99px; background: rgba(120,120,128,.16); backdrop-filter: blur(10px); } .seg button { border: 0; background: transparent; font: 600 13px var(--sans); color: inherit; padding: 6px 14px; border-radius: 99px; cursor: pointer; opacity: .65; } .seg button[aria-pressed="true"] { background: #fff; color: #1c1c1e; opacity: 1; box-shadow: 0 1px 3px rgba(0,0,0,.15); }
+.icon { width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(120,120,128,.16); color: inherit; font-size: 16px; cursor: pointer; backdrop-filter: blur(10px); }
+.dots { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 20; display: flex; gap: 8px; transition: opacity .4s; } .dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: currentColor; opacity: .22; cursor: pointer; transition: all .3s; } .dots button[aria-current="true"] { opacity: .9; width: 22px; border-radius: 4px; }
+.count { position: fixed; left: 20px; bottom: 16px; z-index: 20; font: 12px var(--mono); letter-spacing: .08em; opacity: .5; transition: opacity .4s; }
+.ui, .dots, .count { color: var(--ink); } .dark-ui .ui, .dark-ui .dots, .dark-ui .count { color: var(--dink); } .dark-ui .seg button[aria-pressed="true"] { background: #f5f5f7; }
+.notes-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 18px 8vw 40px; background: rgba(16,17,19,.94); color: #f5f5f7; font-size: clamp(14px, 1.5vw, 20px); line-height: 1.5; } .notes-bar[hidden] { display: none; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+/* portrait stage (phones held upright): text on top, device below */
+.portrait .meta { left: 90px; top: 90px; font-size: 28px; } .portrait .slide:nth-of-type(even) .meta { left: 90px; right: auto; }
+.portrait .copy, .portrait .slide:nth-of-type(even) .copy { left: 90px; right: 90px; top: 150px; width: auto; transform: none; text-align: left; } .portrait .slide[data-state="prev"] .copy { transform: translateX(-140px); } .portrait .slide[data-state="next"] .copy { transform: translateX(140px); }
+.portrait h2 { font-size: 100px; margin-bottom: 36px; } .portrait .phrases { height: 170px; } .portrait .phrases li { font-size: 54px; }
+.portrait .device, .portrait .slide:nth-of-type(even) .device { top: auto; bottom: 70px; left: 0; right: 0; margin: 0 auto; height: 1180px; width: 1080px; }
+.portrait .mac { transform: scale(.98); } .portrait .phone { transform: scale(1.22); transform-origin: center bottom; margin-bottom: 20px; }
+.portrait .term, .portrait .slide:nth-of-type(even) .term { top: auto; bottom: 90px; left: 60px; right: 60px; width: auto; height: 900px; margin: 0; } .portrait .term pre { height: 820px; font-size: 27px; }
+.portrait .slide.center .copy { top: 50%; transform: translateY(-50%); text-align: center; left: 60px; right: 60px; padding: 0; } .portrait .slide.center[data-state="prev"] .copy { transform: translate(-140px, -50%); } .portrait .slide.center[data-state="next"] .copy { transform: translate(140px, -50%); }
+.portrait .slide.center h2 { font-size: 110px; } .portrait .slide.big .phrases b { font-size: 220px; } .portrait .slide.big .phrases { height: 380px; } .portrait .slide.center .meta { left: 90px !important; }
+.portrait .slide.no-device .copy { top: 50%; }
+
+@media (prefers-reduced-motion: reduce) { .slide .copy, .slide .device, .slide .term, .slide .meta, .phrases li, .screen img { transition-duration: .15s !important; transition-delay: 0s !important; transform: none !important; } }
+@media print {
+  @page { size: 1920px 1080px; margin: 0; } html, body { overflow: visible; height: auto; } .viewport { position: static; } .stage { position: static; transform: none !important; width: 1920px; height: auto; }
+  .slide { position: relative !important; width: 1920px; height: 1080px; visibility: visible !important; page-break-after: always; break-after: page; -webkit-print-color-adjust: exact; print-color-adjust: exact; } .slide[data-theme="dark"] { background: var(--dbg); } .slide[data-theme="light"] { background: var(--bg); }
+  .slide .copy, .slide .device, .slide .meta, .slide .term { transform: none !important; opacity: 1 !important; } .ui, .dots, .count, .notes-bar { display: none !important; } .phrases li { position: static; opacity: 1; transform: none; font-size: 40px; margin-bottom: 14px; } .phrases { height: auto; } .screen img:first-child { opacity: 1; }
+}
+
+/* phone status bar: keeps the app header clear of the island */
+.phone .screen { background: #fff; } .phone .screen img { top: 58px; height: calc(100% - 58px); }
+.phone .screen::before { content: "9:41"; position: absolute; z-index: 4; left: 42px; top: 13px; font: 600 24px var(--sans); color: #111; letter-spacing: -.01em; }
+.phone .screen::after { content: ""; position: absolute; z-index: 4; right: 40px; top: 19px; width: 36px; height: 17px; border: 2px solid #111; border-radius: 6px; background: linear-gradient(90deg, #111 78%, transparent 78%); background-clip: content-box; padding: 1px; }
+.slide[data-theme="dark"] .phone .screen { background: #000; } .slide[data-theme="dark"] .phone .screen::before { color: #fff; } .slide[data-theme="dark"] .phone .screen::after { border-color: #fff; background: linear-gradient(90deg, #fff 78%, transparent 78%); background-clip: content-box; }
+.portrait .device, .portrait .slide:nth-of-type(even) .device { height: 1300px; bottom: 30px; } .portrait .phone { transform: scale(1.36); transform-origin: center center; margin-bottom: 0; }

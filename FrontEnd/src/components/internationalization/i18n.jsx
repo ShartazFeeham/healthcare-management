@@ -1,75 +1,58 @@
 import { useState, useEffect } from "react";
 import AxiosInstance from "scripts/axioInstance";
 
+const API = "http://localhost:5400/v1/language/resources";
+
+// One shared dictionary for the whole app. Every (tag, language) pair is requested at most once, so
+// rendering a component never triggers a request loop (even when the translator is unreachable).
+let cache = {};
+let loaded = false;
+let loading = null;
+const requested = new Set();
+const subscribers = new Set();
+const notify = () => subscribers.forEach((bump) => bump((n) => n + 1));
+
+const loadAll = () => {
+  if (!loading) {
+    loading = AxiosInstance.get(`${API}/map`)
+      .then((result) => { cache = result.data || {}; })
+      .catch(() => {})
+      .finally(() => { loaded = true; notify(); });
+  }
+  return loading;
+};
+
 const useI18N = () => {
-  const [base, setBase] = useState({});
-  const [isBaseReady, setIsBaseReady] = useState(false);
+  const [, bump] = useState(0);
 
   useEffect(() => {
-    const url = "http://localhost:5400/v1/language/resources/map";
-    AxiosInstance.get(url)
-      .then((result) => {
-        // console.log(result.data);
-        setBase(result.data);
-        setIsBaseReady(true);
-      })
-      .catch((error) => {
-        // console.log(error);
-      });
+    subscribers.add(bump);
+    loadAll();
+    return () => subscribers.delete(bump);
   }, []);
 
   const text = (tag, alternative) => {
-    const language = localStorage.getItem("language")
-    const tagData = base[tag];
+    const language = localStorage.getItem("language") || "English";
+    const translated = cache[tag]?.translations?.[language]?.localizedText;
+    if (translated) return translated;
 
-    if (tagData && tagData.translations) {
-      const translation = tagData.translations[language];
-      if (translation && translation.localizedText) {
-        return translation.localizedText;
-      }
+    // English is the source language, and nothing is requested until the dictionary has loaded.
+    if (language === "English" || !loaded) return alternative;
+
+    const key = `${tag}|${language}`;
+    if (!requested.has(key)) {
+      requested.add(key);
+      AxiosInstance.get(`${API}/map/${encodeURIComponent(tag)}/alternate/${encodeURIComponent(alternative)}`)
+        .then((result) => {
+          cache = { ...cache, [tag]: { ...(cache[tag] || {}), ...result.data } };
+          notify();
+        })
+        .catch(() => {});
     }
-
-    // Check if base[tag] is defined
-    if (!base[tag]) {
-      // If not defined, add the entire result data for the resource
-      requestTranslation(tag, alternative, (updatedTranslations) => {
-        setBase((prevBase) => ({
-          ...prevBase,
-          [tag]: updatedTranslations,
-        }));
-      });
-    } else {
-      requestTranslation(tag, alternative, (updatedTranslations) => {
-        // If defined, update only the translations
-        setBase((prevBase) => ({
-          ...prevBase,
-          [tag]: {
-            ...prevBase[tag],
-            translations: updatedTranslations,
-          },
-        }));
-      });
-    }
-
-    // console.log("Returning the alternative text", alternative);
     return alternative;
   };
 
-  const requestTranslation = (tag, alternative, callback) => {
-    // console.log("Translation request in progress for", alternative);
-    const url = `http://localhost:5400/v1/language/resources/map/${tag}/alternate/${alternative}`;
-    AxiosInstance.get(url)
-      .then((result) => {
-        // console.log("received new translation", result);
-        callback(result.data.translations);
-      })
-      .catch((error) => {
-        // console.log("error on request", error);
-      });
-    // console.log("returning request process");
-  };
-
-  return { text, isBaseReady };
+  return { text, isBaseReady: loaded };
 };
 
 export default useI18N;

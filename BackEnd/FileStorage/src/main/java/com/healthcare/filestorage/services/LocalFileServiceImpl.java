@@ -1,66 +1,64 @@
 package com.healthcare.filestorage.services;
 
 import com.healthcare.filestorage.exception.LocalFileHandlingException;
-import com.healthcare.filestorage.iservices.AzureFileService;
 import com.healthcare.filestorage.iservices.LocalFileService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.UUID;
 
+/** Files live on the local disk (HC_STORAGE_DIR) and are served back by {@code GET /files/{name}}. */
 @Service
 public class LocalFileServiceImpl implements LocalFileService {
 
-    private static final String DOWNLOAD_FOLDER = "downloads";
+    private final Path root;
+    private final String publicBase;
+
+    public LocalFileServiceImpl(@Value("${hc.storage.dir:./storage}") String dir,
+                                @Value("${hc.storage.public-base:http://localhost:5200}") String publicBase) throws IOException {
+        this.root = Path.of(dir).toAbsolutePath().normalize();
+        this.publicBase = publicBase;
+        Files.createDirectories(root);
+    }
 
     @Override
     public String upload(MultipartFile file) throws LocalFileHandlingException {
+        String original = file.getOriginalFilename() == null ? "file" : Path.of(file.getOriginalFilename()).getFileName().toString();
+        String name = UUID.randomUUID() + "-" + original.replaceAll("[^A-Za-z0-9._-]", "_");
         try {
-            String fileName = UUID.randomUUID() + file.getOriginalFilename();
-            Path filePath = getLocalFilePath(fileName);
-            Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-            return filePath.toString().replace("\\", "/");
+            file.transferTo(root.resolve(name));
+            return publicBase + "/files/" + name;
         } catch (IOException e) {
-            throw new LocalFileHandlingException("Failed to upload the file: storage permission denied.");
+            throw new LocalFileHandlingException("Failed to store the file: " + e.getMessage());
         }
     }
 
     @Override
-    public byte[] download(String filePath) throws LocalFileHandlingException {
+    public byte[] read(String nameOrUrl) throws LocalFileHandlingException {
+        Path file = resolve(nameOrUrl);
         try {
-            File file = new File(filePath.replace("/", "\\"));
-            if (!file.exists()) {
-                throw new LocalFileHandlingException("File not found for download: " + filePath);
-            }
-            return Files.readAllBytes(file.toPath());
+            return Files.readAllBytes(file);
         } catch (IOException e) {
-            throw new LocalFileHandlingException("Failed to read the file content: storage permission denied.");
+            throw new LocalFileHandlingException("File not found: " + nameOrUrl);
         }
     }
 
     @Override
-    public void delete(String filePath) throws LocalFileHandlingException {
+    public void delete(String nameOrUrl) throws LocalFileHandlingException {
         try {
-            File file = new File(filePath.replace("/", "\\"));
-            if (!file.exists()) {
-                throw new LocalFileHandlingException("File not found for deletion: " + filePath);
-            }
-            Files.deleteIfExists(file.toPath());
+            Files.deleteIfExists(resolve(nameOrUrl));
         } catch (IOException e) {
-            throw new LocalFileHandlingException("Failed to delete the file: storage permission denied.");
+            throw new LocalFileHandlingException("Failed to delete the file: " + e.getMessage());
         }
     }
 
-    private Path getLocalFilePath(String fileName) {
-        File storageFolder = new File("src/storage");
-        if (!storageFolder.exists()) {
-            storageFolder.mkdirs();
-        }
-        return storageFolder.toPath().resolve(fileName).toAbsolutePath();
+    /** Accepts a bare name or a full URL; strips directories so nothing outside the root can be reached. */
+    private Path resolve(String nameOrUrl) {
+        String name = nameOrUrl.substring(nameOrUrl.lastIndexOf('/') + 1);
+        return root.resolve(Path.of(name).getFileName().toString());
     }
 }

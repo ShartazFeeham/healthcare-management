@@ -1,0 +1,226 @@
+{
+ "images": {
+  "ex-book": {
+   "file": "assets/img/ex-book.jpg",
+   "callouts": [
+    {
+     "x": 59.38,
+     "y": 33.11,
+     "w": 9.65,
+     "h": 6.67,
+     "label": "Capacity per slot, set by the doctor"
+    },
+    {
+     "x": 68.19,
+     "y": 33.11,
+     "w": 9.65,
+     "h": 6.67,
+     "label": "Live booked count"
+    },
+    {
+     "x": 87.33,
+     "y": 33.11,
+     "w": 6.58,
+     "h": 6.11,
+     "label": "Server refuses a full slot"
+    }
+   ]
+  },
+  "ex-delay-doctor": {
+   "file": "assets/img/ex-delay-doctor.jpg",
+   "callouts": [
+    {
+     "x": 21.39,
+     "y": 249.91,
+     "w": 37.71,
+     "h": 24.78,
+     "label": "Doctor announces a 15 minute delay"
+    }
+   ]
+  },
+  "ex-delay-slot": {
+   "file": "assets/img/ex-delay-slot.jpg",
+   "callouts": [
+    {
+     "x": 77.01,
+     "y": 33.11,
+     "w": 9.65,
+     "h": 6.67,
+     "label": "Delay shown on the slot"
+    }
+   ]
+  },
+  "ex-otp": {
+   "file": "assets/img/ex-otp.jpg",
+   "callouts": [
+    {
+     "x": 20.49,
+     "y": 44.19,
+     "w": 7.91,
+     "h": 4.53,
+     "label": "The one-time code, delivered offline"
+    },
+    {
+     "x": 81.2,
+     "y": 93.89,
+     "w": 7.76,
+     "h": 4.56,
+     "label": "No email or SMS provider"
+    }
+   ]
+  },
+  "ex-video": {
+   "file": "assets/img/ex-video.jpg",
+   "callouts": [
+    {
+     "x": 77.63,
+     "y": 16.16,
+     "w": 6.84,
+     "h": 3.75,
+     "label": "Server-verified, peer-to-peer"
+    }
+   ]
+  },
+  "ex-video-doctor": {
+   "file": "assets/img/ex-video-doctor.jpg",
+   "callouts": [
+    {
+     "x": 11.39,
+     "y": 15.84,
+     "w": 24.51,
+     "h": 4,
+     "label": "Doctor's side of the same call"
+    }
+   ]
+  },
+  "ex-report": {
+   "file": "assets/img/ex-report.jpg",
+   "callouts": [
+    {
+     "x": 6.02,
+     "y": 7.99,
+     "w": 87.97,
+     "h": 2.09,
+     "label": "1 · what the record says"
+    },
+    {
+     "x": 6.02,
+     "y": 36.85,
+     "w": 87.97,
+     "h": 2.09,
+     "label": "2 · comparable anonymised cases"
+    },
+    {
+     "x": 6.02,
+     "y": 59.13,
+     "w": 87.97,
+     "h": 2.09,
+     "label": "3 · what to do next"
+    }
+   ]
+  },
+  "ex-treat": {
+   "file": "assets/img/ex-treat.jpg",
+   "callouts": [
+    {
+     "x": 53.9,
+     "y": 46.61,
+     "w": 28.85,
+     "h": 6.11,
+     "label": "Structured record feeds the report"
+    },
+    {
+     "x": 53.78,
+     "y": 62.17,
+     "w": 28.97,
+     "h": 6.11,
+     "label": "Comma-separated, keyword-indexed"
+    }
+   ]
+  },
+  "ex-goal": {
+   "file": "assets/img/ex-goal.jpg",
+   "callouts": [
+    {
+     "x": 21.11,
+     "y": 79.73,
+     "w": 75.14,
+     "h": 5.33,
+     "label": "Wellness challenges set by admins"
+    }
+   ]
+  }
+ },
+ "sequences": {
+  "booking": [
+   {
+    "file": "assets/seq/booking/01.jpg",
+    "caption": "Choose a doctor"
+   },
+   {
+    "file": "assets/seq/booking/02.jpg",
+    "caption": "Pick a day"
+   },
+   {
+    "file": "assets/seq/booking/03.jpg",
+    "caption": "Pick a slot, with live capacity and delay"
+   }
+  ],
+  "report": [
+   {
+    "file": "assets/seq/report/01.jpg",
+    "caption": "Open the patient's profile"
+   },
+   {
+    "file": "assets/seq/report/02.jpg",
+    "caption": "Generate: similar cases are searched"
+   },
+   {
+    "file": "assets/seq/report/03.jpg",
+    "caption": "Three sections, written locally"
+   }
+  ],
+  "languages": [
+   {
+    "file": "assets/seq/languages/01.jpg",
+    "caption": "English"
+   },
+   {
+    "file": "assets/seq/languages/02.jpg",
+    "caption": "Bengali"
+   },
+   {
+    "file": "assets/seq/languages/03.jpg",
+    "caption": "Hindi"
+   },
+   {
+    "file": "assets/seq/languages/04.jpg",
+    "caption": "Arabic"
+   },
+   {
+    "file": "assets/seq/languages/05.jpg",
+    "caption": "Spanish"
+   },
+   {
+    "file": "assets/seq/languages/06.jpg",
+    "caption": "German"
+   },
+   {
+    "file": "assets/seq/languages/07.jpg",
+    "caption": "Japanese"
+   },
+   {
+    "file": "assets/seq/languages/08.jpg",
+    "caption": "Chinese"
+   },
+   {
+    "file": "assets/seq/languages/09.jpg",
+    "caption": "Russian"
+   },
+   {
+    "file": "assets/seq/languages/10.jpg",
+    "caption": "Portuguese"
+   }
+  ]
+ }
+}

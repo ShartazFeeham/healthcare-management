@@ -3,7 +3,7 @@ const patientProfileData = {
   lastName: "Islam",
   gender: "Male",
   profilePhoto:
-    "https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*",
+    "/img/local/photo-placeholder.svg",
   allergies: "Eggs, Wheat",
   age: 25,
   height: 164,

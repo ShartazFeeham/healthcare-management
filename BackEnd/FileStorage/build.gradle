@@ -23,11 +23,6 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	// Azure
-	implementation group: 'com.azure', name: 'azure-storage-blob', version: '12.24.0'
-	implementation group: 'com.azure', name: 'azure-storage-file-datalake', version: '12.5.1'
-	implementation group: 'com.azure', name: 'azure-storage-file-share', version: '12.7.0'
-	implementation group: 'com.azure', name: 'azure-storage-queue', version: '12.0.0'
-	implementation group: 'com.azure', name: 'azure-identity', version: '1.10.4'
 
 	// Microservice env dependencies
 	implementation 'org.springframework.cloud:spring-cloud-starter'

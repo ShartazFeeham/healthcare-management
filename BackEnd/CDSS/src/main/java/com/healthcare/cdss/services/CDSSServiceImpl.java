@@ -11,10 +11,12 @@ import com.healthcare.cdss.network.GPTRequester;
 import com.healthcare.cdss.repository.TreatmentRepository;
 import com.healthcare.cdss.utilities.token.IDExtractor;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -22,6 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class CDSSServiceImpl implements CDSSService {
@@ -66,11 +69,11 @@ public class CDSSServiceImpl implements CDSSService {
         return sortedList.stream()
                 .limit(2)
                 .map(entry -> {
-                    Treatment treatment = treatmentRepository.findById(entry.getKey()).get();
-                    treatment.setPatientId("HIDDEN");
-                    treatment.setId(-1L);
-                    treatment.setAuthorId("HIDDEN");
-                    return treatment;
+                    Treatment source = treatmentRepository.findById(entry.getKey()).get();
+                    // Anonymise a detached copy: mutating the managed entity would make Hibernate try to
+                    // write the hidden identifiers back to the database.
+                    return new Treatment(-1L, source.getCondition(), LocalDate.parse(source.getIssueDate()), source.getMedicines(),
+                            source.getDiagnoses(), source.getProgression(), source.getDoctorComment(), "HIDDEN", "HIDDEN", source.getKeywords());
                 })
                 .collect(Collectors.toList());
     }
@@ -113,6 +116,7 @@ public class CDSSServiceImpl implements CDSSService {
             }
             return result;
         } catch (Exception e) {
+            log.error("AI analysis failed for patient {}", patientId, e);
             throw new CustomException("InternalCallException", "Internal call to AI analysis failed.", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

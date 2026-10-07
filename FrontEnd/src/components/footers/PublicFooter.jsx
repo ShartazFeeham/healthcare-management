@@ -11,8 +11,8 @@ const Login = () => {
                 © {new Date().getFullYear()}{" "}
                 <a
                   className="font-weight-bold ml-1"
-                  href="http://localhost:3000"
-                  target="_blank"
+                  href="http://localhost:3100"
+                  
                 >
                   EA Healthcare
                 </a>
@@ -21,32 +21,32 @@ const Login = () => {
             <Col xl="6">
               <Nav className="nav-footer justify-content-center justify-content-xl-end">
                 <NavItem>
-                  <NavLink href="http://localhost:3000" target="_blank">
+                  <NavLink href="http://localhost:3100" >
                     EA Healthcare
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://www.creative-tim.com/presentation?ref=adr-auth-footer"
-                    target="_blank"
+                    href="/common/index"
+                    
                   >
-                    About Us
+                    Overview
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="http://blog.creative-tim.com?ref=adr-auth-footer"
-                    target="_blank"
+                    href="/common/medicines"
+                    
                   >
-                    Blog
+                    Medicines
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-auth-footer"
-                    target="_blank"
+                    href="/common/mailbox"
+                    
                   >
-                    Contact
+                    Local mailbox
                   </NavLink>
                 </NavItem>
               </Nav>

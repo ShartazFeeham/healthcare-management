@@ -1,4 +1,4 @@
-import doctorAvailability from "assets/data/doctorprofile/doctorAvailability";
+import AxiosInstance from "scripts/axioInstance";
 import React, { useEffect, useState } from "react";
 import { Button, Row, Col } from "reactstrap";
 
@@ -8,9 +8,30 @@ const DoctorProfileAvailability = ({ doctorId }) => {
   const [availability, setAvailability] = useState();
 
   useEffect(() => {
-    console.log("Getting doctor availability data.");
-    setAvailability(doctorAvailability);
-  }, [availability]);
+    if (!doctorId) return;
+    // Built from the doctor's real schedule: shift type 1 = in person, 2 = telemedicine, 0 = off.
+    const SLOTS = [
+      { fromTime: "08:00 AM", toTime: "12:00 PM" },
+      { fromTime: "01:00 PM", toTime: "05:00 PM" },
+      { fromTime: "05:00 PM", toTime: "09:00 PM" },
+    ];
+    AxiosInstance.get(`http://localhost:7400/schedule/dates/${doctorId}`)
+      .then(async (response) => {
+        const result = { onsite: [], telemedicine: [] };
+        for (const date of response.data) {
+          const day = (await AxiosInstance.get(`http://localhost:7400/schedule/get/${date}/${doctorId}`)).data;
+          [day.morning, day.afterNoon, day.evening].forEach((type, i) => {
+            const bucket = type === 1 ? result.onsite : type === 2 ? result.telemedicine : null;
+            if (!bucket) return;
+            let entry = bucket.find((x) => x.date === date);
+            if (!entry) bucket.push((entry = { date, timeslots: [] }));
+            entry.timeslots.push(SLOTS[i]);
+          });
+        }
+        setAvailability(result);
+      })
+      .catch(() => setAvailability({ onsite: [], telemedicine: [] }));
+  }, [doctorId]);
 
   const tableData = (data) => {
     if (cut)

@@ -1,0 +1,12 @@
+{
+  "name": "ea-healthcare-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio showcase for the EA Healthcare Management platform: product tour, architecture and engineering story.",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.mjs",
+    "tour": "node tools/tour.mjs",
+    "stats": "node tools/stats.mjs"
+  }
+}

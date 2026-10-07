@@ -1,0 +1,17 @@
+import { launch } from "./cdp.mjs";
+import { readFileSync } from "node:fs";
+const seed = JSON.parse(readFileSync(new URL("../../seeder/last-run.json", import.meta.url)));
+const email = seed.patients[2].email;
+const b = await launch({ port: 9392 }); const p = await b.newPage();
+const net = []; p.on((m) => { if (m.method === "Network.responseReceived" && /localhost:5[0-9]{3}/.test(m.params.response.url)) net.push(m.params.response.status + " " + m.params.response.url.replace("http://localhost:", ":")); });
+await fetch("http://localhost:5300/v1/outbox", { method: "DELETE" });
+await p.setStorage({ language: "English" }, "http://localhost:3100");
+await p.goto("http://localhost:3100/public/forgotten-password", { settle: 1500 });
+await p.type("input[placeholder='Email']", email);
+await p.eval("[...document.querySelectorAll('button')].find(b=>b.innerText.trim()==='Send OTP').click()"); await new Promise(r=>setTimeout(r,1500));
+const box = await (await fetch("http://localhost:5300/v1/outbox")).json(); const otp = box[0].body.match(/\d{6}/)[0];
+await p.type("input[placeholder='OTP']", otp); await p.type("input[placeholder='New Password']", "NewSecret@456"); await p.type("input[placeholder='Confirm Password']", "NewSecret@456");
+console.log(await p.eval("[...document.querySelectorAll('button')].map(b=>b.innerText.trim()+':'+b.disabled).join(' | ')"));
+await p.eval("[...document.querySelectorAll('button')].find(b=>b.innerText.trim()==='Reset Password').click()"); await new Promise(r=>setTimeout(r,2000));
+console.log((await p.eval("document.body.innerText")).replace(/\s+/g," ").slice(0,300)); console.log(net.join("\n"));
+await b.close();

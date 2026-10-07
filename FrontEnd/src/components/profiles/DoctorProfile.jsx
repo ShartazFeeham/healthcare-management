@@ -10,7 +10,7 @@ import AxiosInstance from "scripts/axioInstance";
 const DoctorProfile = () => {
   let { doctorId } = useParams();
   const navigate = useNavigate();
-  const [doctorData, setDoctorData] = useState(doctorProfileData);
+  const [doctorData, setDoctorData] = useState({ ...doctorProfileData, doctorId: "" }); // placeholder until the real profile loads
 
   // console.log(doctorId);
 

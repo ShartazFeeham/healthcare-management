@@ -7,7 +7,7 @@ const patientDataBio = {
   gender: "Male",
   bloodGroup: "A+",
   profilePhoto:
-    "https://d.newsweek.com/en/full/1860844/little-girl-holding-phone.jpg",
+    "/img/local/photo-placeholder.svg",
 };
 
 export default patientDataBio;

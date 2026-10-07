@@ -56,7 +56,7 @@ public class ReactionServiceImpl implements ReactionService {
                 .type("COMMUNITY")
                 .suffix("Visit the post to see the more")
                 .userId(postAuthor)
-                .url("http://localhost:3000/health/posts/" + post.getPostId())
+                .url("http://localhost:3100/health/posts/" + post.getPostId())
                 .build();
         if(post.getPhotoURL() != null && !post.getPhotoURL().isEmpty()){
             notificationRequest.setPhotoUrl(post.getPhotoURL());

@@ -93,7 +93,7 @@ public class DelayServiceImpl implements DelayService {
         } else throw new ItemNotFoundException("shift ", shift);
 
         // If the entry time is not within the specified shift, return 0.
-        if (entryTime.toLocalTime().isBefore(shiftStartTime) && entryTime.toLocalTime().isAfter(shiftEndTime)) return 0;
+        if (entryTime.toLocalTime().isBefore(shiftStartTime) || entryTime.toLocalTime().isAfter(shiftEndTime)) return 0;
         // Return the delay in minutes.
         return delay.getDelayMinutes();
     }
@@ -151,7 +151,7 @@ public class DelayServiceImpl implements DelayService {
 
         // Determine the shift based on the entry time.
         if (entryLocalTime.isAfter(AppointmentConstants.MORNING_START_TIME)
-                && entryLocalTime.isAfter(AppointmentConstants.MORNING_END_TIME)) {
+                && entryLocalTime.isBefore(AppointmentConstants.MORNING_END_TIME)) {
             shift = "morning";
         } else if (entryLocalTime.isAfter(AppointmentConstants.AFTERNOON_START_TIME)
                 && entryLocalTime.isBefore(AppointmentConstants.AFTERNOON_END_TIME)) {
@@ -175,7 +175,7 @@ public class DelayServiceImpl implements DelayService {
             String shiftedTime = timeFormatter
                     .formatTo12HourFormat((appointment.getAppointmentTime()
                             .plusMinutes(delay.getDelayMinutes())).toLocalTime());
-            String url = "http://localhost:3000/health/patient";
+            String url = "http://localhost:3100/health/patient";
 
             NotificationRequest notification = NotificationRequest.builder()
                     .userId(userId)

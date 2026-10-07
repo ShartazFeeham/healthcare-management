@@ -116,8 +116,27 @@ const StatusItem = ({ st }) => {
   };
 
   const reactPost = (r) => {
-    console.log("Post id: " + status.postId + " reaction: " + r);
     setShowReactions(false);
+    AxiosInstance.post("http://localhost:7500/posts/react", {
+      postId: status.postId,
+      type: r + 1,
+    })
+      .then(() => AxiosInstance.get(`http://localhost:7500/posts/${status.postId}`))
+      .then((response) => {
+        // Rebuild the summary shown on the card: reaction types ordered by frequency.
+        const all = response.data.reactions || [];
+        const counts = {};
+        all.forEach((x) => (counts[x.type] = (counts[x.type] || 0) + 1));
+        const ordered = Object.keys(counts)
+          .sort((a, b) => counts[b] - counts[a])
+          .map(Number);
+        setStatus((prev) => ({
+          ...prev,
+          reactions: ordered,
+          reactionsCount: all.length,
+        }));
+      })
+      .catch((error) => console.error("Could not react to the post", error));
   };
 
   const renderReactions = () => {

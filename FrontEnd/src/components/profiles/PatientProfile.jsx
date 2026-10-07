@@ -6,6 +6,7 @@ import { PatientProfileBio } from "./PatientProfileBio";
 import { PatientProfilePhoto } from "./PatientProfilePhoto";
 import { PatientProfileHealth } from "./PatientProfileHealth";
 import { PatientProfileTreatment } from "./PatientProfileTreatment";
+import { PatientProfileAnalysis } from "./PatientProfileAnalysis";
 import AxiosInstance from "scripts/axioInstance";
 
 const PatientProfile = () => {
@@ -76,6 +77,7 @@ const PatientProfile = () => {
           <Col className="order-xl-1" xl="8">
             <PatientProfileHealth patientId={patientId} />
             <PatientProfileTreatment patientId={patientId} />
+            <PatientProfileAnalysis patientId={patientId} />
           </Col>
         </Row>
       </Container>

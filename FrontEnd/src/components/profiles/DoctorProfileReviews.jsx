@@ -1,4 +1,4 @@
-import doctorReviews from "assets/data/doctorprofile/doctorReviews";
+import AxiosInstance from "scripts/axioInstance";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Media, Progress, Table } from "reactstrap";
@@ -6,8 +6,15 @@ import { Media, Progress, Table } from "reactstrap";
 export const DoctorProfileReviews = ({ doctorId }) => {
   const [feedbacks, setFeedbacks] = useState([]);
   useEffect(() => {
-    setFeedbacks(doctorReviews);
-  }, [feedbacks]);
+    if (!doctorId) return;
+    AxiosInstance.get(`http://localhost:7400/reviews/doctor/${doctorId}`)
+      .then((response) =>
+        setFeedbacks(
+          response.data.map((r) => ({ patientId: r.userId, comment: r.comment, rating: r.rating, date: r.date }))
+        )
+      )
+      .catch(() => setFeedbacks([]));
+  }, [doctorId]);
 
   const calculateAverageRating = () => {
     if (feedbacks.length === 0) return 0;

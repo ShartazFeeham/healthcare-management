@@ -11,7 +11,7 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState([]);
   const loader =
-    "https://afeestorage.blob.core.windows.net/healthcare/e537aa41-4af5-46df-90ce-8a7e6ee5aaa5load-35_256.gif";
+    "/img/local/spinner.svg";
   const [searched, setSearched] = useState(false);
 
   useEffect(() => {

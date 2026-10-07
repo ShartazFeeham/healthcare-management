@@ -133,11 +133,15 @@ public final class GoogleTranslate { //Class marked as final since all methods a
         if(rawData==null){
             return null;
         }
-        String[] raw =  rawData.split("\"");//Parses the JSON
-        if(raw.length<2){
+        // Response is [[["translated","original",...],["translated 2","original 2",...]],...]: join every segment.
+        try {
+            com.fasterxml.jackson.databind.JsonNode segments = new com.fasterxml.jackson.databind.ObjectMapper().readTree(rawData).path(0);
+            StringBuilder out = new StringBuilder();
+            for (com.fasterxml.jackson.databind.JsonNode segment : segments) out.append(segment.path(0).asText(""));
+            return out.length() == 0 ? null : out.toString();
+        } catch (Exception e) {
             return null;
         }
-        return raw[1];//Returns the translation
     }
 
     /**
@@ -148,6 +152,9 @@ public final class GoogleTranslate { //Class marked as final since all methods a
      */
     private static String urlToText(URL url) throws IOException{
         URLConnection urlConn = url.openConnection(); //Open connection
+        // Fail fast when offline instead of hanging the caller.
+        urlConn.setConnectTimeout(4000);
+        urlConn.setReadTimeout(6000);
         //Adding header for user agent is required. Otherwise, Google rejects the request
         urlConn.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0) Gecko/20100101 Firefox/4.0");
         Reader r = new java.io.InputStreamReader(urlConn.getInputStream(), Charset.forName("UTF-8"));//Gets Data Converts to string

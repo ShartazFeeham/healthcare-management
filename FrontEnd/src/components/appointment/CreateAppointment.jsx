@@ -31,6 +31,7 @@ const CreateAppointment = () => {
   }, []);
 
   useEffect(() => {
+    if (!spec) return; // initial render, before the default filter is applied
     AxiosInstance.get(`http://localhost:7200/specializations/${spec}`)
       .then((response) => {
         setDoctors(response.data);

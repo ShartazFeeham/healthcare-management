@@ -21,7 +21,7 @@ public class Report {
     private String content;
     private LocalDateTime generationTime;
 
-    private String getGenerationTime(){
+    public String getGenerationTime(){
         return generationTime.toString();
     }
 }

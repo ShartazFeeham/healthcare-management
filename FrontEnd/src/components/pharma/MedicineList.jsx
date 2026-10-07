@@ -55,7 +55,7 @@ const MedicineList = () => {
   }, [search])
 
   useEffect(() => {
-    console.log(filterPath);
+    if (!filterPath) return; // path is computed by the effects above on first render
     AxiosInstance.get(filterPath)
       .then((result) => {
         console.log(result);

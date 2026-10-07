@@ -58,6 +58,7 @@ const Schedules = ({ selectedDoctor, setSelectedDoctor }) => {
   }, []);
 
   useEffect(() => {
+    if (!selectedDate) return; // wait for a date to be picked
     AxiosInstance.get(
       `http://localhost:7400/schedule/get/${selectedDate}/${selectedDoctor.userId}`
     )

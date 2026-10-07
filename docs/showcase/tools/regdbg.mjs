@@ -1,0 +1,17 @@
+import { launch } from "./cdp.mjs";
+const b = await launch({ port: 9390 });
+const p = await b.newPage();
+const net = [];
+p.on((m) => { if (m.method === "Network.responseReceived" && m.params.response.url.includes("localhost:7") || (m.method === "Network.responseReceived" && m.params.response.url.includes("localhost:5"))) net.push(m.params.response.status + " " + m.params.response.url); });
+await p.setStorage({ language: "English" }, "http://localhost:3100");
+await p.goto("http://localhost:3100/public/register-patient", { settle: 1500 });
+await p.type("input[placeholder='First name']", "Esha"); await p.type("input[placeholder='Last name']", "Tester");
+await p.type("input[placeholder='Email']", "esha.dbg@mail.healthcare.local"); await p.select("#gender", "Female"); await p.type("input[placeholder='Age']", "29");
+await p.type("input[placeholder='Password']", "Secret@123"); await p.type("input[placeholder='Re-type password']", "Secret@123");
+await p.click("#customCheckAgree");
+console.log(await p.eval("JSON.stringify([...document.querySelectorAll('input,select')].map(e=>[e.placeholder||e.id, e.value, e.checked]))"));
+await p.click("text=Create account", { settle: 2500 });
+console.log((await p.eval("document.body.innerText")).replace(/\s+/g, " ").slice(0, 400));
+console.log(net.join("\n"));
+await p.screenshot("/tmp/shots/reg.png");
+await b.close();

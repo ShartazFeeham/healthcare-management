@@ -1,0 +1,443 @@
+{
+ "generatedAt": "2026-10-06T16:59:43.380Z",
+ "languages": [
+  {
+   "languageCode": "en",
+   "languageName": "English"
+  },
+  {
+   "languageCode": "zh",
+   "languageName": "Chinese"
+  },
+  {
+   "languageCode": "es",
+   "languageName": "Spanish"
+  },
+  {
+   "languageCode": "hi",
+   "languageName": "Hindi"
+  },
+  {
+   "languageCode": "ar",
+   "languageName": "Arabic"
+  },
+  {
+   "languageCode": "bn",
+   "languageName": "Bengali"
+  },
+  {
+   "languageCode": "pt",
+   "languageName": "Portuguese"
+  },
+  {
+   "languageCode": "ru",
+   "languageName": "Russian"
+  },
+  {
+   "languageCode": "ja",
+   "languageName": "Japanese"
+  },
+  {
+   "languageCode": "de",
+   "languageName": "German"
+  }
+ ],
+ "resources": {
+  "login-title": {
+   "en": "Login in to your account",
+   "zh": "登录您的帐户",
+   "es": "Inicie sesión en su cuenta",
+   "hi": "अपने खाते में लॉग इन करें",
+   "ar": "تسجيل الدخول إلى حسابك",
+   "bn": "আপনার অ্যাকাউন্টে লগ ইন করুন",
+   "pt": "Faça login na sua conta",
+   "ru": "Войдите в свой аккаунт",
+   "ja": "アカウントにログインします",
+   "de": "Melden Sie sich bei Ihrem Konto an"
+  },
+  "login-verify": {
+   "en": "Your account needs to be verified",
+   "zh": "您的帐户需要验证",
+   "es": "Su cuenta necesita ser verificada",
+   "hi": "आपके खाते को सत्यापित करने की आवश्यकता है",
+   "ar": "حسابك يحتاج إلى التحقق",
+   "bn": "আপনার অ্যাকাউন্ট যাচাই করা প্রয়োজন",
+   "pt": "Sua conta precisa ser verificada",
+   "ru": "Ваша учетная запись должна быть подтверждена",
+   "ja": "アカウントを認証する必要があります",
+   "de": "Ihr Konto muss verifiziert werden"
+  },
+  "click-here-to-verify": {
+   "en": "click here to verify your account",
+   "zh": "单击此处验证您的帐户",
+   "es": "haga clic aquí para verificar su cuenta",
+   "hi": "अपना खाता सत्यापित करने के लिए यहां क्लिक करें",
+   "ar": "انقر هنا للتحقق من حسابك",
+   "bn": "আপনার অ্যাকাউন্ট যাচাই করতে এখানে ক্লিক করুন",
+   "pt": "clique aqui para verificar sua conta",
+   "ru": "нажмите здесь, чтобы подтвердить свою учетную запись",
+   "ja": "ここをクリックしてアカウントを確認してください",
+   "de": "Klicken Sie hier, um Ihr Konto zu bestätigen"
+  },
+  "login-identity": {
+   "en": "Email or User ID",
+   "zh": "电子邮件或用户 ID",
+   "es": "Correo electrónico o ID de usuario",
+   "hi": "ईमेल या उपयोगकर्ता ID",
+   "ar": "البريد الإلكتروني أو معرف المستخدم",
+   "bn": "ইমেইল বা ইউজার আইডি",
+   "pt": "E-mail ou ID de usuário",
+   "ru": "Электронная почта или идентификатор пользователя",
+   "ja": "メールアドレスまたはユーザーID",
+   "de": "E-Mail oder Benutzer-ID"
+  },
+  "login-password": {
+   "en": "Password",
+   "zh": "密码",
+   "es": "Contraseña",
+   "hi": "पासवर्ड",
+   "ar": "كلمة المرور",
+   "bn": "পাসওয়ার্ড",
+   "pt": "Senha",
+   "ru": "Пароль",
+   "ja": "パスワード",
+   "de": "Passwort"
+  },
+  "login-password-check": {
+   "en": "Show password",
+   "zh": "显示密码",
+   "es": "Mostrar contraseña",
+   "hi": "पासवर्ड दिखाए",
+   "ar": "إظهار كلمة المرور",
+   "bn": "পাসওয়ার্ড দেখান",
+   "pt": "Mostrar senha",
+   "ru": "Показать пароль",
+   "ja": "パスワードを表示",
+   "de": "Passwort anzeigen"
+  },
+  "login": {
+   "en": "Login",
+   "zh": "登录",
+   "es": "Acceso",
+   "hi": "लॉग इन करें",
+   "ar": "تسجيل الدخول",
+   "bn": "লগইন করুন",
+   "pt": "Conecte-se",
+   "ru": "Авторизоваться",
+   "ja": "ログイン",
+   "de": "Login"
+  },
+  "login-forgotten": {
+   "en": "Forgotten password",
+   "zh": "忘记密码",
+   "es": "Contraseña olvidada",
+   "hi": "पासवर्ड भूल गए",
+   "ar": "نسيت كلمة المرور",
+   "bn": "পাসওয়ার্ড ভুলে গেছে",
+   "pt": "Esqueci a senha",
+   "ru": "Забытый пароль",
+   "ja": "パスワードを忘れた場合",
+   "de": "Passwort vergessen"
+  },
+  "login-not-registered": {
+   "en": "Not registered yet",
+   "zh": "尚未注册",
+   "es": "Aún no registrado",
+   "hi": "अभी तक पंजीकृत नहीं है",
+   "ar": "لم يتم التسجيل بعد",
+   "bn": "এখনো নিবন্ধিত হয়নি",
+   "pt": "Ainda não cadastrado",
+   "ru": "Еще не зарегистрирован",
+   "ja": "まだ登録されていません",
+   "de": "Noch nicht registriert"
+  },
+  "login-create-patient": {
+   "en": "Create patient account",
+   "zh": "创建患者账户",
+   "es": "Crear cuenta de paciente",
+   "hi": "रोगी खाता बनाएँ",
+   "ar": "إنشاء حساب المريض",
+   "bn": "রোগীর অ্যাকাউন্ট তৈরি করুন",
+   "pt": "Criar conta de paciente",
+   "ja": "患者アカウントを作成する",
+   "de": "Patientenkonto erstellen",
+   "ru": "Создать учетную запись пациента"
+  },
+  "or": {
+   "en": "or",
+   "zh": "或者",
+   "es": "o",
+   "hi": "या",
+   "ar": "أو",
+   "bn": "বা",
+   "pt": "ou",
+   "ru": "или",
+   "ja": "または",
+   "de": "oder"
+  },
+  "login-create-doctor": {
+   "en": "Join as a doctor",
+   "zh": "加入成为一名医生",
+   "es": "Únase como médico",
+   "hi": "एक डॉक्टर के रूप में शामिल हों",
+   "ar": "انضم كطبيب",
+   "bn": "ডাক্তার হিসেবে যোগ দিন",
+   "pt": "Junte-se como médico",
+   "ru": "Присоединяйтесь как врач",
+   "ja": "医師として参加する",
+   "de": "Treten Sie als Arzt bei"
+  },
+  "rooms-update-successful": {
+   "en": "Room updated succesfully.",
+   "zh": "房间更新成功。",
+   "hi": "कमरा सफलतापूर्वक अपडेट किया गया.",
+   "ar": "تم تحديث الغرفة بنجاح",
+   "bn": "রুম সফলভাবে আপডেট করা হয়েছে।",
+   "pt": "Quarto atualizado com sucesso.",
+   "ru": "Комната успешно обновлена.",
+   "ja": "部屋は正常に更新されました。",
+   "es": "Habitación actualizada con éxito.",
+   "de": "Der Raum wurde erfolgreich aktualisiert."
+  },
+  "rooms-update-failed": {
+   "en": "Failed to update room.",
+   "zh": "更新房间失败。",
+   "es": "No se pudo actualizar la habitación.",
+   "hi": "कमरा अपडेट करने में विफल.",
+   "ar": "فشل في تحديث الغرفة.",
+   "bn": "রুম আপডেট করতে ব্যর্থ হয়েছে.",
+   "pt": "Falha ao atualizar a sala.",
+   "ru": "Не удалось обновить комнату.",
+   "de": "Der Raum konnte nicht aktualisiert werden.",
+   "ja": "部屋の更新に失敗しました。"
+  },
+  "rooms-allocate": {
+   "en": "Set a room for doctor",
+   "zh": "为医生安排房间",
+   "es": "Establecer una habitación para el médico.",
+   "hi": "डॉक्टर के लिए एक कमरा निर्धारित करें",
+   "ar": "تجهيز غرفة للطبيب",
+   "bn": "ডাক্তারের জন্য একটি রুম সেট করুন",
+   "pt": "Defina uma sala para o médico",
+   "ru": "Оборудовать комнату для врача",
+   "ja": "医者の部屋を用意する",
+   "de": "Richten Sie ein Zimmer für den Arzt ein"
+  },
+  "settings-saved": {
+   "en": "Settings saved successfully:",
+   "zh": "设置保存成功：",
+   "es": "Configuración guardada exitosamente:",
+   "hi": "सेटिंग्स सफलतापूर्वक सहेजी गईं:",
+   "ar": "تم حفظ الإعدادات بنجاح:",
+   "pt": "Configurações salvas com sucesso:",
+   "ru": "Настройки успешно сохранены:",
+   "ja": "設定が正常に保存されました:",
+   "de": "Einstellungen erfolgreich gespeichert:",
+   "bn": "সেটিংস সফলভাবে সংরক্ষিত হয়েছে:"
+  },
+  "save-error": {
+   "en": "Error saving user settings:",
+   "zh": "保存用户设置时出错：",
+   "es": "Error al guardar la configuración del usuario:",
+   "hi": "उपयोगकर्ता सेटिंग सहेजने में त्रुटि:",
+   "ar": "خطأ في حفظ إعدادات المستخدم:",
+   "bn": "ব্যবহারকারীর সেটিংস সংরক্ষণে ত্রুটি:",
+   "pt": "Erro ao salvar as configurações do usuário:",
+   "ja": "ユーザー設定の保存中にエラーが発生しました:",
+   "de": "Fehler beim Speichern der Benutzereinstellungen:",
+   "ru": "Ошибка сохранения пользовательских настроек:"
+  },
+  "settings-title": {
+   "en": "Notification and Languages Settings",
+   "zh": "通知和语言设置",
+   "es": "Configuración de notificaciones e idiomas",
+   "hi": "अधिसूचना और भाषा सेटिंग्स",
+   "ar": "إعدادات الإشعارات واللغات",
+   "bn": "বিজ্ঞপ্তি এবং ভাষা সেটিংস",
+   "pt": "Configurações de notificação e idiomas",
+   "ru": "Настройки уведомлений и языков",
+   "ja": "通知と言語の設定",
+   "de": "Benachrichtigungs- und Spracheinstellungen"
+  },
+  "settings-notification-preferences": {
+   "en": "Notification Preferences",
+   "zh": "通知首选项",
+   "es": "Preferencias de notificación",
+   "hi": "अधिसूचना प्राथमिकताएँ",
+   "ar": "تفضيلات الإخطار",
+   "bn": "বিজ্ঞপ্তি পছন্দ",
+   "pt": "Preferências de notificação",
+   "ru": "Настройки уведомлений",
+   "ja": "通知設定",
+   "de": "Benachrichtigungseinstellungen"
+  },
+  "settings-email-notifications": {
+   "en": "Email Notifications",
+   "zh": "电子邮件通知",
+   "es": "Notificaciones por correo electrónico",
+   "hi": "ईमेल सूचनाएं",
+   "ar": "إشعارات البريد الإلكتروني",
+   "bn": "ইমেল বিজ্ঞপ্তি",
+   "pt": "Notificações por e-mail",
+   "ru": "Уведомления по электронной почте",
+   "ja": "電子メール通知",
+   "de": "E-Mail-Benachrichtigungen"
+  },
+  "settings-sms-notifications": {
+   "en": "SMS Notifications",
+   "zh": "短信通知",
+   "es": "Notificaciones por SMS",
+   "hi": "एसएमएस सूचनाएं",
+   "ar": "إشعارات الرسائل القصيرة",
+   "bn": "এসএমএস বিজ্ঞপ্তি",
+   "pt": "Notificações por SMS",
+   "ru": "СМС-уведомления",
+   "ja": "SMS通知",
+   "de": "SMS-Benachrichtigungen"
+  },
+  "settings-push-notifications": {
+   "en": "Push Notifications",
+   "zh": "推送通知",
+   "es": "Notificaciones push",
+   "hi": "सूचनाएं धक्का",
+   "ar": "دفع الإخطارات",
+   "bn": "পুশ বিজ্ঞপ্তি",
+   "pt": "Notificações push",
+   "ru": "Push-уведомления",
+   "ja": "プッシュ通知",
+   "de": "Push-Benachrichtigungen"
+  },
+  "settings-do-not-disturb": {
+   "en": "Do Not Disturb",
+   "zh": "请勿打扰",
+   "es": "No molestar",
+   "hi": "परेशान मत करो",
+   "ar": "لا تخل",
+   "bn": "বিরক্ত করবেন না",
+   "pt": "Não incomodar",
+   "ru": "Просьба не беспокоить",
+   "ja": "邪魔しないでください",
+   "de": "Bitte nicht stören"
+  },
+  "settings-notification-types": {
+   "en": "Notification Types",
+   "zh": "通知类型",
+   "es": "Tipos de notificación",
+   "hi": "अधिसूचना प्रकार",
+   "ar": "أنواع الإخطارات",
+   "bn": "বিজ্ঞপ্তি প্রকার",
+   "pt": "Tipos de notificação",
+   "ru": "Типы уведомлений",
+   "ja": "通知の種類",
+   "de": "Benachrichtigungstypen"
+  },
+  "settings-account-updates": {
+   "en": "Account Updates",
+   "zh": "账户更新",
+   "es": "Actualizaciones de cuenta",
+   "hi": "खाता अद्यतन",
+   "ar": "تحديثات الحساب",
+   "bn": "অ্যাকাউন্ট আপডেট",
+   "pt": "Atualizações de conta",
+   "ru": "Обновления учетной записи",
+   "ja": "アカウントの更新",
+   "de": "Kontoaktualisierungen"
+  },
+  "settings-appointment-updates": {
+   "en": "Appointment Updates",
+   "zh": "预约更新",
+   "es": "Actualizaciones de citas",
+   "hi": "नियुक्ति अद्यतन",
+   "ar": "تحديثات التعيين",
+   "bn": "অ্যাপয়েন্টমেন্ট আপডেট",
+   "pt": "Atualizações de compromissos",
+   "ru": "Обновления встреч",
+   "de": "Terminaktualisierungen",
+   "ja": "予約の更新"
+  },
+  "settings-community-updates": {
+   "en": "Community Updates",
+   "zh": "社区更新",
+   "es": "Actualizaciones de la comunidad",
+   "hi": "सामुदायिक अद्यतन",
+   "ar": "تحديثات المجتمع",
+   "bn": "সম্প্রদায় আপডেট",
+   "pt": "Atualizações da comunidade",
+   "ru": "Обновления сообщества",
+   "ja": "コミュニティの最新情報",
+   "de": "Community-Updates"
+  },
+  "settings-site-updates": {
+   "en": "Site Updates",
+   "es": "Actualizaciones del sitio",
+   "hi": "साइट अद्यतन",
+   "ar": "تحديثات الموقع",
+   "bn": "সাইট আপডেট",
+   "pt": "Atualizações do site",
+   "ru": "Обновления сайта",
+   "ja": "サイトの更新",
+   "de": "Site-Updates",
+   "zh": "网站更新"
+  },
+  "settings-language": {
+   "en": "Language",
+   "zh": "语言",
+   "es": "Idioma",
+   "hi": "भाषा",
+   "ar": "لغة",
+   "bn": "ভাষা",
+   "pt": "Linguagem",
+   "ru": "Язык",
+   "ja": "言語",
+   "de": "Sprache"
+  },
+  "settings-save": {
+   "en": "Save",
+   "zh": "节省",
+   "es": "Ahorrar",
+   "hi": "बचाना",
+   "ar": "يحفظ",
+   "bn": "সংরক্ষণ করুন",
+   "pt": "Salvar",
+   "ja": "保存",
+   "de": "Speichern",
+   "ru": "Сохранять"
+  },
+  "search-search-button": {
+   "en": "Search",
+   "zh": "搜索",
+   "es": "Buscar",
+   "hi": "खोज",
+   "ar": "يبحث",
+   "bn": "অনুসন্ধান করুন",
+   "pt": "Procurar",
+   "ru": "Поиск",
+   "ja": "検索",
+   "de": "Suchen"
+  },
+  "search-no-result": {
+   "en": "No results found!",
+   "zh": "没有找到结果！",
+   "es": "¡No se encontraron resultados!",
+   "hi": "कोई परिणाम नहीं मिला!",
+   "ar": "لم يتم العثور على نتائج!",
+   "bn": "কোন ফলাফল পাওয়া যায়নি!",
+   "pt": "Nenhum resultado encontrado!",
+   "ru": "Результаты не найдены!",
+   "ja": "結果が見つかりませんでした!",
+   "de": "Keine Ergebnisse gefunden!"
+  },
+  "search-found-count": {
+   "en": "results found!",
+   "zh": "结果找到了！",
+   "es": "resultados encontrados!",
+   "hi": "परिणाम मिल गए!",
+   "ar": "تم العثور على النتائج!",
+   "bn": "ফলাফল পাওয়া গেছে!",
+   "pt": "resultados encontrados!",
+   "ru": "результаты найдены!",
+   "ja": "結果が見つかりました！",
+   "de": "Ergebnisse gefunden!"
+  }
+ }
+}

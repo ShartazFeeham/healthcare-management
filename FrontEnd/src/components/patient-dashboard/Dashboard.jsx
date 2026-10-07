@@ -60,6 +60,7 @@ const PatientDashboard = () => {
   useEffect(() => {
     setSuccessMessage("");
     setErrorMessage("");
+    if (!selectedDate) return; // no date picked yet
     AxiosInstance.get(
       `http://localhost:7400/schedule/get/${selectedDate}/${doctorId}`
     )

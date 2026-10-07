@@ -32,9 +32,6 @@ public class Doctor {
     @Email(message = "Invalid email format")
     private String email;
 
-    @NotBlank(message = "Password cannot be blank")
-    @Size(min = 6, message = "Password must have at least 6 characters")
-    private String password;
 
     @NotNull(message = "Gender cannot be null")
     private String gender;

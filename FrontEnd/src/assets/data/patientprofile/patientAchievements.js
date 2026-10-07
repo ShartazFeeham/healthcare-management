@@ -6,7 +6,7 @@ const patientDataAchievements = {
       completedIn: 32,
       completionDate: "2023-10-15",
       logoUrl:
-        "https://w7.pngwing.com/pngs/509/717/png-transparent-ribbon-award-achievement-copyright-electric-blue-prize-thumbnail.png",
+        "/img/local/ribbon.svg",
     },
     {
       title: "5K Run",
@@ -14,7 +14,7 @@ const patientDataAchievements = {
       completedIn: 11,
       completionDate: "2023-08-25",
       logoUrl:
-        "https://w7.pngwing.com/pngs/509/717/png-transparent-ribbon-award-achievement-copyright-electric-blue-prize-thumbnail.png",
+        "/img/local/ribbon.svg",
     },
     {
       title: "Quit Smoking",
@@ -22,7 +22,7 @@ const patientDataAchievements = {
       completedIn: 289,
       completionDate: "2023-07-30",
       logoUrl:
-        "https://w7.pngwing.com/pngs/509/717/png-transparent-ribbon-award-achievement-copyright-electric-blue-prize-thumbnail.png",
+        "/img/local/ribbon.svg",
     },
   ],
 };

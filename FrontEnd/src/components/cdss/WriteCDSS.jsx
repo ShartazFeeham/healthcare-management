@@ -50,7 +50,7 @@ const WriteCDSS = () => {
   const textColor = { color: "#555" };
 
   useEffect(() => {
-    const url = `http://localhost:7800/treatments/author/PSF1`;
+    const url = `http://localhost:7800/treatments/author/${localStorage.getItem("userId")}`;
     AxiosInstance.get(url)
       .then((result) => {
         console.log(result.data);

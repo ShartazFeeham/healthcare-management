@@ -89,7 +89,7 @@ const MedicineDetails = () => {
                   src={
                     medicineDetails.photoUrl !== null
                       ? medicineDetails.photoUrl
-                      : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Medicine_Drugs.svg/2560px-Medicine_Drugs.svg.png"
+                      : "/img/local/medicine-default.svg"
                   }
                   alt={medicineDetails.commercialName}
                   style={{

@@ -35,7 +35,6 @@ public class DoctorServiceImpl implements DoctorService {
         doctor.setFirstName(createDoctorAccountDTO.getFirstName());
         doctor.setLastName(createDoctorAccountDTO.getLastName());
         doctor.setEmail(createDoctorAccountDTO.getEmail());
-        doctor.setPassword(createDoctorAccountDTO.getPassword());
         doctor.setGender(createDoctorAccountDTO.getGender());
         doctor.setProfilePhoto(createDoctorAccountDTO.getPhoto());
         doctor.setBio(createDoctorAccountDTO.getBio());

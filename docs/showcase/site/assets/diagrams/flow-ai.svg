@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 480" width="1200" height="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1626"/><stop offset="1" stop-color="#14263f"/></linearGradient>
+<radialGradient id="glow" cx=".15" cy=".1" r=".9"><stop offset="0" stop-color="#3d8bff" stop-opacity=".22"/><stop offset="1" stop-color="#3d8bff" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="480" rx="22" fill="url(#bg)"/><rect width="1200" height="480" rx="22" fill="url(#glow)"/>
+<text x="30" y="40" fill="#e8f0ff" font-size="21" font-weight="800">AI-assisted health report (clinical decision support)</text>
+<text x="30" y="62" fill="#8ea6c9" font-size="13">Similar-case search plus a local analyst: the patient's data never leaves the server</text>
+
+<path id="e-e1" d="M230 195 L310 195" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e2" d="M420 230 L420 320" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e3" d="M530 355 L610 355" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e4" d="M530 195 L610 195" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e5" d="M830 195 L910 195" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e6" d="M310 195 L270 195 L135 195 L135 320" fill="none" stroke="#2b4468" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="n-spa">
+      <rect id="halo-spa" x="35" y="155" width="200" height="80" rx="17" fill="#3d8bff" opacity="0"/>
+      <rect x="40" y="160" width="190" height="70" rx="13" fill="#16263d" stroke="#3d8bff" stroke-width="1.6"/>
+      <circle cx="66" cy="195" r="17" fill="#3d8bff" fill-opacity=".16"/>
+      <g transform="translate(54 183) scale(1)" fill="none" stroke="#3d8bff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 9h19"/><circle cx="5.5" cy="6.5" r=".6"/><circle cx="8" cy="6.5" r=".6"/></g>
+      <text x="92" y="192" fill="#e8f0ff" font-size="14" font-weight="700">Patient profile</text>
+      <text x="92" y="209" fill="#8ea6c9" font-size="11">Generate report</text>
+    </g>
+<g id="n-cd">
+      <rect id="halo-cd" x="305" y="155" width="230" height="80" rx="17" fill="#ffb84d" opacity="0"/>
+      <rect x="310" y="160" width="220" height="70" rx="13" fill="#16263d" stroke="#ffb84d" stroke-width="1.6"/>
+      <circle cx="336" cy="195" r="17" fill="#ffb84d" fill-opacity=".16"/>
+      <g transform="translate(324 183) scale(1)" fill="none" stroke="#ffb84d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5.5L19.5 10 14 12l-2 5.5L10 12 4.5 10 10 8.5z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></g>
+      <text x="362" y="192" fill="#e8f0ff" font-size="14" font-weight="700">CDSS service</text>
+      <text x="362" y="209" fill="#8ea6c9" font-size="11">treatments · reports</text>
+    </g>
+<g id="n-int">
+      <rect id="halo-int" x="605" y="155" width="230" height="80" rx="17" fill="#9a7bff" opacity="0"/>
+      <rect x="610" y="160" width="220" height="70" rx="13" fill="#16263d" stroke="#9a7bff" stroke-width="1.6"/>
+      <circle cx="636" cy="195" r="17" fill="#9a7bff" fill-opacity=".16"/>
+      <g transform="translate(624 183) scale(1)" fill="none" stroke="#9a7bff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6.5" rx="2"/><rect x="3" y="13.5" width="18" height="6.5" rx="2"/><circle cx="7" cy="7.2" r=".8"/><circle cx="7" cy="16.8" r=".8"/></g>
+      <text x="662" y="192" fill="#e8f0ff" font-size="14" font-weight="700">Integration service</text>
+      <text x="662" y="209" fill="#8ea6c9" font-size="11">POST /v1/ai/chat</text>
+    </g>
+<g id="n-ana">
+      <rect id="halo-ana" x="905" y="155" width="260" height="80" rx="17" fill="#ffb84d" opacity="0"/>
+      <rect x="910" y="160" width="250" height="70" rx="13" fill="#16263d" stroke="#ffb84d" stroke-width="1.6"/>
+      <circle cx="936" cy="195" r="17" fill="#ffb84d" fill-opacity=".16"/>
+      <g transform="translate(924 183) scale(1)" fill="none" stroke="#ffb84d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5.5L19.5 10 14 12l-2 5.5L10 12 4.5 10 10 8.5z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></g>
+      <text x="962" y="192" fill="#e8f0ff" font-size="14" font-weight="700">Local clinical analyst</text>
+      <text x="962" y="209" fill="#8ea6c9" font-size="11">knowledge base · templates</text>
+    </g>
+<g id="n-db">
+      <rect id="halo-db" x="305" y="315" width="230" height="80" rx="17" fill="#4cd964" opacity="0"/>
+      <rect x="310" y="320" width="220" height="70" rx="13" fill="#16263d" stroke="#4cd964" stroke-width="1.6"/>
+      <circle cx="336" cy="355" r="17" fill="#4cd964" fill-opacity=".16"/>
+      <g transform="translate(324 343) scale(1)" fill="none" stroke="#4cd964" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+      <text x="362" y="352" fill="#e8f0ff" font-size="14" font-weight="700">MySQL · cdss</text>
+      <text x="362" y="369" fill="#8ea6c9" font-size="11">treatments, reports</text>
+    </g>
+<g id="n-sim">
+      <rect id="halo-sim" x="605" y="315" width="230" height="80" rx="17" fill="#22c7a9" opacity="0"/>
+      <rect x="610" y="320" width="220" height="70" rx="13" fill="#16263d" stroke="#22c7a9" stroke-width="1.6"/>
+      <circle cx="636" cy="355" r="17" fill="#22c7a9" fill-opacity=".16"/>
+      <g transform="translate(624 343) scale(1)" fill="none" stroke="#22c7a9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g>
+      <text x="662" y="352" fill="#e8f0ff" font-size="14" font-weight="700">Similarity search</text>
+      <text x="662" y="369" fill="#8ea6c9" font-size="11">keyword overlap · top 2</text>
+    </g>
+<g id="n-out">
+      <rect id="halo-out" x="35" y="315" width="200" height="80" rx="17" fill="#4cd964" opacity="0"/>
+      <rect x="40" y="320" width="190" height="70" rx="13" fill="#16263d" stroke="#4cd964" stroke-width="1.6"/>
+      <circle cx="66" cy="355" r="17" fill="#4cd964" fill-opacity=".16"/>
+      <g transform="translate(54 343) scale(1)" fill="none" stroke="#4cd964" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></g>
+      <text x="92" y="352" fill="#e8f0ff" font-size="14" font-weight="700">3-section report</text>
+      <text x="92" y="369" fill="#8ea6c9" font-size="11">overview · cohort · outlook</text>
+    </g>
+<path d="M230 195 L310 195" fill="none" stroke="#3d8bff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#3d8bff" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M230 195 L310 195" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.00676;0.13514;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="270" cy="195" r="11" fill="#3d8bff"/><text x="270" y="199.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">1</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-cd" opacity="0" style="fill:#3d8bff"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M420 230 L420 320" fill="none" stroke="#4cd964" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#4cd964" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M420 230 L420 320" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.15541;0.28378;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="420" cy="275" r="11" fill="#4cd964"/><text x="420" y="279.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">2</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-db" opacity="0" style="fill:#4cd964"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M530 355 L610 355" fill="none" stroke="#22c7a9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#22c7a9" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M530 355 L610 355" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.30405;0.43243;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="570" cy="355" r="11" fill="#22c7a9"/><text x="570" y="359.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">3</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-sim" opacity="0" style="fill:#22c7a9"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M530 195 L610 195" fill="none" stroke="#9a7bff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#9a7bff" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M530 195 L610 195" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.4527;0.58108;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="570" cy="195" r="11" fill="#9a7bff"/><text x="570" y="199.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">4</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-int" opacity="0" style="fill:#9a7bff"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M830 195 L910 195" fill="none" stroke="#ffb84d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#ffb84d" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M830 195 L910 195" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.60135;0.72973;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="870" cy="195" r="11" fill="#ffb84d"/><text x="870" y="199.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">5</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-ana" opacity="0" style="fill:#ffb84d"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M310 195 L270 195 L135 195 L135 320" fill="none" stroke="#4cd964" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#4cd964" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M310 195 L270 195 L135 195 L135 320" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.75;0.87838;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="160" cy="195" r="11" fill="#4cd964"/><text x="160" y="199.5" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">6</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-out" opacity="0" style="fill:#4cd964"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></use>
+<g opacity="0"><rect x="30" y="418" width="1140" height="40" rx="12" fill="#16263d" stroke="#3d8bff" stroke-opacity=".7"/><circle cx="58" cy="438" r="12" fill="#3d8bff"/><text x="58" y="442.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">1</text><text x="82" y="443" font-size="14" fill="#e8f0ff">The patient (or their doctor) requests a report for patient ID PER1.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="418" width="1140" height="40" rx="12" fill="#16263d" stroke="#4cd964" stroke-opacity=".7"/><circle cx="58" cy="438" r="12" fill="#4cd964"/><text x="58" y="442.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">2</text><text x="82" y="443" font-size="14" fill="#e8f0ff">CDSS loads the patient's treatments and every other patient's treatment keywords.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="418" width="1140" height="40" rx="12" fill="#16263d" stroke="#22c7a9" stroke-opacity=".7"/><circle cx="58" cy="438" r="12" fill="#22c7a9"/><text x="58" y="442.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">3</text><text x="82" y="443" font-size="14" fill="#e8f0ff">Cases are ranked by keyword overlap; the two closest are anonymised (copied, IDs hidden).</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="418" width="1140" height="40" rx="12" fill="#16263d" stroke="#9a7bff" stroke-opacity=".7"/><circle cx="58" cy="438" r="12" fill="#9a7bff"/><text x="58" y="442.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">4</text><text x="82" y="443" font-size="14" fill="#e8f0ff">A structured prompt with the patient data and the similar cases goes to the Integration service.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="418" width="1140" height="40" rx="12" fill="#16263d" stroke="#ffb84d" stroke-opacity=".7"/><circle cx="58" cy="438" r="12" fill="#ffb84d"/><text x="58" y="442.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">5</text><text x="82" y="443" font-size="14" fill="#e8f0ff">The local analyst writes the analysis from the data plus a clinical knowledge base (specialists, tests, advice).</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="418" width="1140" height="40" rx="12" fill="#16263d" stroke="#4cd964" stroke-opacity=".7"/><circle cx="58" cy="438" r="12" fill="#4cd964"/><text x="58" y="442.5" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">6</text><text x="82" y="443" font-size="14" fill="#e8f0ff">The report is stored, then shown as three sections with the anonymised cases beside it.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></g>
+</svg>

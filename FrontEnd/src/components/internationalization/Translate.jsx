@@ -11,7 +11,15 @@ const Translate = ({ text }) => {
   const [display, setDisplay] = useState(text);
   const [translated, setTranslated] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [offline, setOffline] = useState(false);
   const [original, setOriginal] = useState(text);
+
+  // The text prop can change after the first render (data loaded later); keep the view in sync.
+  useEffect(() => {
+    setDisplay(text);
+    setOriginal(text);
+    setTranslated(false);
+  }, [text]);
 
   const langCodes = {
     Chinese: "zh",
@@ -48,6 +56,8 @@ const Translate = ({ text }) => {
         .catch((error) => {
           console.log("error on request", error);
           setLoading(false);
+          // The translator is the one online-only feature; fail with a clear message instead of silently.
+          setOffline(true);
         });
       return;
     }
@@ -68,6 +78,11 @@ const Translate = ({ text }) => {
             style={{ fontSize: "small", cursor: "pointer" }}
           >
             <i class="fa fa-language" aria-hidden="true"></i> See translation
+            {offline && (
+              <span style={{ color: "#fb6340", marginLeft: 8 }}>
+                (translator is unreachable while offline)
+              </span>
+            )}
           </div>
         ) : (
           ""

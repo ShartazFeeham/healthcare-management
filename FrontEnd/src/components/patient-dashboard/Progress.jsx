@@ -97,7 +97,7 @@ const Progress = () => {
               margin: "10px",
             }}
           >
-            <h2 className="m-4 text-white">Aachievements</h2>
+            <h2 className="m-4 text-white">Achievements</h2>
           </Col>
         </Row>
         <div className="text-xl">List of all achievements</div>
