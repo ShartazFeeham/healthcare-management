@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 830" width="1200" height="830" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<rect width="1200" height="830" rx="22" fill="#fff" stroke="#e5e5ea"/>
+<text x="30" y="40" fill="#1d1d1f" font-size="21" font-weight="800">EA Healthcare · High-level design</text>
+<text x="30" y="62" fill="#6e6e73" font-size="13">15 Spring Boot services · database per service · every dependency runs on localhost</text>
+<rect x="20" y="80" width="520" height="170" rx="18" fill="#1f6fe5" fill-opacity=".07" stroke="#1f6fe5" stroke-opacity=".55" stroke-dasharray="5 5"/>
+<text x="36" y="102" fill="#6e6e73" font-size="12" font-weight="700" letter-spacing="1.6">CLIENTS</text>
+<rect x="560" y="80" width="620" height="170" rx="18" fill="#6f4be8" fill-opacity=".07" stroke="#6f4be8" stroke-opacity=".55" stroke-dasharray="5 5"/>
+<text x="576" y="102" fill="#6e6e73" font-size="12" font-weight="700" letter-spacing="1.6">SPRING CLOUD EDGE</text>
+<rect x="20" y="270" width="1160" height="300" rx="18" fill="#1f6fe5" fill-opacity=".07" stroke="#1f6fe5" stroke-opacity=".55" stroke-dasharray="5 5"/>
+<text x="36" y="292" fill="#6e6e73" font-size="12" font-weight="700" letter-spacing="1.6">DOMAIN MICROSERVICES (REST + JWT)</text>
+<rect x="20" y="596" width="1160" height="150" rx="18" fill="#2a9d4b" fill-opacity=".07" stroke="#2a9d4b" stroke-opacity=".55" stroke-dasharray="5 5"/>
+<text x="36" y="618" fill="#6e6e73" font-size="12" font-weight="700" letter-spacing="1.6">DATA AND LOCAL INFRASTRUCTURE</text>
+<path id="e-u1" d="M210 126 L255 126 L255 178 L300 178" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-u2" d="M210 176 L255 176 L255 178 L300 178" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-u3" d="M210 224 L255 224 L255 178 L300 178" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-sg" d="M520 178 L580 168" fill="none" stroke="#6f4be8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-ge" d="M760 168 L790 168" fill="none" stroke="#6f4be8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-ec" d="M970 168 L990 168" fill="none" stroke="#6f4be8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-bus" d="M410 216 L410 252 L1035 252" fill="none" stroke="#1f6fe5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-stub0" d="M165 252 L165 312" fill="none" stroke="#1f6fe5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-stub1" d="M455 252 L455 312" fill="none" stroke="#1f6fe5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-stub2" d="M745 252 L745 312" fill="none" stroke="#1f6fe5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-stub3" d="M1035 252 L1035 312" fill="none" stroke="#1f6fe5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-n_i" d="M290 523 L910 523" fill="none" stroke="#6f4be8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-c_i" d="M1035 464 L1035 492" fill="none" stroke="#c77700" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-t_i" d="M455 554 L455 550 L885 550 L885 523 L910 523" fill="none" stroke="#1f6fe5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-a_n" d="M165 464 L165 492" fill="none" stroke="#0f9d84" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-p_a" d="M330 343 L290 343" fill="none" stroke="#c77700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-i_g" d="M1035 554 L1035 612 L1050 612 L1050 640" fill="none" stroke="#d03a3a" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-dbus" d="M165 554 L165 580 L1000 580" fill="none" stroke="#2a9d4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-up0" d="M165 554 L165 580" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-up1" d="M455 554 L455 580" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-up2" d="M745 554 L745 580" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-up3" d="M960 554 L960 580" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-dn0" d="M147 580 L147 640" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-dn1" d="M365 580 L365 640" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-dn2" d="M570 580 L570 640" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-dn3" d="M802 580 L802 640" fill="none" stroke="#2a9d4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="n-pat">
+      <rect id="halo-pat" x="35" y="99" width="180" height="54" rx="17" fill="#d93a72" opacity="0"/>
+      <rect x="40" y="104" width="170" height="44" rx="13" fill="#ffffff" stroke="#d93a72" stroke-width="1.6"/>
+      <circle cx="66" cy="126" r="17" fill="#d93a72" fill-opacity=".16"/>
+      <g transform="translate(54 114) scale(1)" fill="none" stroke="#d93a72" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.2C2 7.4 4.2 5 7 5c1.9 0 3.4 1 5 3 1.6-2 3.1-3 5-3 2.8 0 5 2.4 4 5.8C19.500 15.400 12 20 12 20z"/></g>
+      <text x="92" y="123" fill="#1d1d1f" font-size="14" font-weight="700">Patient</text>
+      <text x="92" y="140" fill="#6e6e73" font-size="11">book · track · analyse</text>
+    </g>
+<g id="n-doc">
+      <rect id="halo-doc" x="35" y="149" width="180" height="54" rx="17" fill="#0f9d84" opacity="0"/>
+      <rect x="40" y="154" width="170" height="44" rx="13" fill="#ffffff" stroke="#0f9d84" stroke-width="1.6"/>
+      <circle cx="66" cy="176" r="17" fill="#0f9d84" fill-opacity=".16"/>
+      <g transform="translate(54 164) scale(1)" fill="none" stroke="#0f9d84" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="12" r="2"/></g>
+      <text x="92" y="173" fill="#1d1d1f" font-size="14" font-weight="700">Doctor</text>
+      <text x="92" y="190" fill="#6e6e73" font-size="11">treat · publish</text>
+    </g>
+<g id="n-adm">
+      <rect id="halo-adm" x="35" y="199" width="180" height="50" rx="17" fill="#c77700" opacity="0"/>
+      <rect x="40" y="204" width="170" height="40" rx="13" fill="#ffffff" stroke="#c77700" stroke-width="1.6"/>
+      <circle cx="66" cy="224" r="17" fill="#c77700" fill-opacity=".16"/>
+      <g transform="translate(54 212) scale(1)" fill="none" stroke="#c77700" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g>
+      <text x="92" y="221" fill="#1d1d1f" font-size="14" font-weight="700">Admin</text>
+      <text x="92" y="238" fill="#6e6e73" font-size="11">operate · moderate</text>
+    </g>
+<g id="n-spa">
+      <rect id="halo-spa" x="295" y="135" width="230" height="86" rx="17" fill="#1f6fe5" opacity="0"/>
+      <rect x="300" y="140" width="220" height="76" rx="13" fill="#ffffff" stroke="#1f6fe5" stroke-width="1.6"/>
+      <circle cx="326" cy="178" r="17" fill="#1f6fe5" fill-opacity=".16"/>
+      <g transform="translate(314 166) scale(1)" fill="none" stroke="#1f6fe5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 9h19"/><circle cx="5.5" cy="6.5" r=".6"/><circle cx="8" cy="6.5" r=".6"/></g>
+      <text x="352" y="175" fill="#1d1d1f" font-size="14" font-weight="700">React SPA</text>
+      <text x="352" y="192" fill="#6e6e73" font-size="11">:3100 · 40+ screens</text>
+    </g>
+<g id="n-gw">
+      <rect id="halo-gw" x="575" y="135" width="190" height="66" rx="17" fill="#6f4be8" opacity="0"/>
+      <rect x="580" y="140" width="180" height="56" rx="13" fill="#ffffff" stroke="#6f4be8" stroke-width="1.6"/>
+      <circle cx="606" cy="168" r="17" fill="#6f4be8" fill-opacity=".16"/>
+      <g transform="translate(594 156) scale(1)" fill="none" stroke="#6f4be8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h7M14 12h7"/><path d="M7 8l-4 4 4 4M17 8l4 4-4 4"/><circle cx="12" cy="12" r="2.2"/></g>
+      <text x="632" y="165" fill="#1d1d1f" font-size="14" font-weight="700">API Gateway</text>
+      <text x="632" y="182" fill="#6e6e73" font-size="11">:9999 · CORS</text>
+    </g>
+<g id="n-eu">
+      <rect id="halo-eu" x="785" y="135" width="190" height="66" rx="17" fill="#6f4be8" opacity="0"/>
+      <rect x="790" y="140" width="180" height="56" rx="13" fill="#ffffff" stroke="#6f4be8" stroke-width="1.6"/>
+      <circle cx="816" cy="168" r="17" fill="#6f4be8" fill-opacity=".16"/>
+      <g transform="translate(804 156) scale(1)" fill="none" stroke="#6f4be8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></g>
+      <text x="842" y="165" fill="#1d1d1f" font-size="14" font-weight="700">Eureka</text>
+      <text x="842" y="182" fill="#6e6e73" font-size="11">:8761 · registry</text>
+    </g>
+<g id="n-cfg">
+      <rect id="halo-cfg" x="985" y="135" width="180" height="66" rx="17" fill="#6f4be8" opacity="0"/>
+      <rect x="990" y="140" width="170" height="56" rx="13" fill="#ffffff" stroke="#6f4be8" stroke-width="1.6"/>
+      <circle cx="1016" cy="168" r="17" fill="#6f4be8" fill-opacity=".16"/>
+      <g transform="translate(1004 156) scale(1)" fill="none" stroke="#6f4be8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></g>
+      <text x="1042" y="165" fill="#1d1d1f" font-size="14" font-weight="700">Config server</text>
+      <text x="1042" y="182" fill="#6e6e73" font-size="11">:8888 · local files</text>
+    </g>
+<g id="n-acc">
+      <rect id="halo-acc" x="35" y="307" width="260" height="72" rx="17" fill="#c77700" opacity="0"/>
+      <rect x="40" y="312" width="250" height="62" rx="13" fill="#ffffff" stroke="#c77700" stroke-width="1.6"/>
+      <circle cx="66" cy="343" r="17" fill="#c77700" fill-opacity=".16"/>
+      <g transform="translate(54 331) scale(1)" fill="none" stroke="#c77700" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g>
+      <text x="92" y="340" fill="#1d1d1f" font-size="14" font-weight="700">Account</text>
+      <text x="92" y="357" fill="#6e6e73" font-size="11">:5100 · auth, OTP, roles</text>
+    </g>
+<g id="n-pat_s">
+      <rect id="halo-pat_s" x="325" y="307" width="260" height="72" rx="17" fill="#d93a72" opacity="0"/>
+      <rect x="330" y="312" width="250" height="62" rx="13" fill="#ffffff" stroke="#d93a72" stroke-width="1.6"/>
+      <circle cx="356" cy="343" r="17" fill="#d93a72" fill-opacity=".16"/>
+      <g transform="translate(344 331) scale(1)" fill="none" stroke="#d93a72" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.2C2 7.4 4.2 5 7 5c1.9 0 3.4 1 5 3 1.6-2 3.1-3 5-3 2.8 0 5 2.4 4 5.8C19.500 15.400 12 20 12 20z"/></g>
+      <text x="382" y="340" fill="#1d1d1f" font-size="14" font-weight="700">Patients</text>
+      <text x="382" y="357" fill="#6e6e73" font-size="11">:7100 · profiles, challenges</text>
+    </g>
+<g id="n-doc_s">
+      <rect id="halo-doc_s" x="615" y="307" width="260" height="72" rx="17" fill="#0f9d84" opacity="0"/>
+      <rect x="620" y="312" width="250" height="62" rx="13" fill="#ffffff" stroke="#0f9d84" stroke-width="1.6"/>
+      <circle cx="646" cy="343" r="17" fill="#0f9d84" fill-opacity=".16"/>
+      <g transform="translate(634 331) scale(1)" fill="none" stroke="#0f9d84" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="12" r="2"/></g>
+      <text x="672" y="340" fill="#1d1d1f" font-size="14" font-weight="700">Doctors</text>
+      <text x="672" y="357" fill="#6e6e73" font-size="11">:7200 · profiles, rooms</text>
+    </g>
+<g id="n-med">
+      <rect id="halo-med" x="905" y="307" width="260" height="72" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="910" y="312" width="250" height="62" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="936" cy="343" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(924 331) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="4" transform="rotate(-35 12 12)"/><path d="M9.200 14.800l5.600-5.600" transform="rotate(0 12 12)"/></g>
+      <text x="962" y="340" fill="#1d1d1f" font-size="14" font-weight="700">Medicines</text>
+      <text x="962" y="357" fill="#6e6e73" font-size="11">:7300 · pharmacy library</text>
+    </g>
+<g id="n-app">
+      <rect id="halo-app" x="35" y="397" width="260" height="72" rx="17" fill="#1f6fe5" opacity="0"/>
+      <rect x="40" y="402" width="250" height="62" rx="13" fill="#ffffff" stroke="#1f6fe5" stroke-width="1.6"/>
+      <circle cx="66" cy="433" r="17" fill="#1f6fe5" fill-opacity=".16"/>
+      <g transform="translate(54 421) scale(1)" fill="none" stroke="#1f6fe5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.500"/><path d="M3 10h18M8 3v4M16 3v4"/></g>
+      <text x="92" y="430" fill="#1d1d1f" font-size="14" font-weight="700">Appointment</text>
+      <text x="92" y="447" fill="#6e6e73" font-size="11">:7400 · slots, equipment, reviews</text>
+    </g>
+<g id="n-com">
+      <rect id="halo-com" x="325" y="397" width="260" height="72" rx="17" fill="#d93a72" opacity="0"/>
+      <rect x="330" y="402" width="250" height="62" rx="13" fill="#ffffff" stroke="#d93a72" stroke-width="1.6"/>
+      <circle cx="356" cy="433" r="17" fill="#d93a72" fill-opacity=".16"/>
+      <g transform="translate(344 421) scale(1)" fill="none" stroke="#d93a72" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-8l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></g>
+      <text x="382" y="430" fill="#1d1d1f" font-size="14" font-weight="700">Community</text>
+      <text x="382" y="447" fill="#6e6e73" font-size="11">:7500 · posts, comments</text>
+    </g>
+<g id="n-help">
+      <rect id="halo-help" x="615" y="397" width="260" height="72" rx="17" fill="#6f4be8" opacity="0"/>
+      <rect x="620" y="402" width="250" height="62" rx="13" fill="#ffffff" stroke="#6f4be8" stroke-width="1.6"/>
+      <circle cx="646" cy="433" r="17" fill="#6f4be8" fill-opacity=".16"/>
+      <g transform="translate(634 421) scale(1)" fill="none" stroke="#6f4be8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g>
+      <text x="672" y="430" fill="#1d1d1f" font-size="14" font-weight="700">Help desk</text>
+      <text x="672" y="447" fill="#6e6e73" font-size="11">:7700 · unified search</text>
+    </g>
+<g id="n-cdss">
+      <rect id="halo-cdss" x="905" y="397" width="260" height="72" rx="17" fill="#c77700" opacity="0"/>
+      <rect x="910" y="402" width="250" height="62" rx="13" fill="#ffffff" stroke="#c77700" stroke-width="1.6"/>
+      <circle cx="936" cy="433" r="17" fill="#c77700" fill-opacity=".16"/>
+      <g transform="translate(924 421) scale(1)" fill="none" stroke="#c77700" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5.5L19.5 10 14 12l-2 5.5L10 12 4.5 10 10 8.5z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></g>
+      <text x="962" y="430" fill="#1d1d1f" font-size="14" font-weight="700">CDSS</text>
+      <text x="962" y="447" fill="#6e6e73" font-size="11">:7800 · treatments, AI report</text>
+    </g>
+<g id="n-not">
+      <rect id="halo-not" x="35" y="487" width="260" height="72" rx="17" fill="#0f9d84" opacity="0"/>
+      <rect x="40" y="492" width="250" height="62" rx="13" fill="#ffffff" stroke="#0f9d84" stroke-width="1.6"/>
+      <circle cx="66" cy="523" r="17" fill="#0f9d84" fill-opacity=".16"/>
+      <g transform="translate(54 511) scale(1)" fill="none" stroke="#0f9d84" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 2h-15z"/><path d="M10 21a2 2 0 0 0 4 0"/></g>
+      <text x="92" y="520" fill="#1d1d1f" font-size="14" font-weight="700">Notification</text>
+      <text x="92" y="537" fill="#6e6e73" font-size="11">:7600 · preferences, alerts</text>
+    </g>
+<g id="n-i18n">
+      <rect id="halo-i18n" x="325" y="487" width="260" height="72" rx="17" fill="#1f6fe5" opacity="0"/>
+      <rect x="330" y="492" width="250" height="62" rx="13" fill="#ffffff" stroke="#1f6fe5" stroke-width="1.6"/>
+      <circle cx="356" cy="523" r="17" fill="#1f6fe5" fill-opacity=".16"/>
+      <g transform="translate(344 511) scale(1)" fill="none" stroke="#1f6fe5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g>
+      <text x="382" y="520" fill="#1d1d1f" font-size="14" font-weight="700">I18N</text>
+      <text x="382" y="537" fill="#6e6e73" font-size="11">:5400 · languages, strings</text>
+    </g>
+<g id="n-file">
+      <rect id="halo-file" x="615" y="487" width="260" height="72" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="620" y="492" width="250" height="62" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="646" cy="523" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(634 511) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g>
+      <text x="672" y="520" fill="#1d1d1f" font-size="14" font-weight="700">File storage</text>
+      <text x="672" y="537" fill="#6e6e73" font-size="11">:5200 · uploads on disk</text>
+    </g>
+<g id="n-int">
+      <rect id="halo-int" x="905" y="487" width="260" height="72" rx="17" fill="#6f4be8" opacity="0"/>
+      <rect x="910" y="492" width="250" height="62" rx="13" fill="#ffffff" stroke="#6f4be8" stroke-width="1.6"/>
+      <circle cx="936" cy="523" r="17" fill="#6f4be8" fill-opacity=".16"/>
+      <g transform="translate(924 511) scale(1)" fill="none" stroke="#6f4be8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6.5" rx="2"/><rect x="3" y="13.5" width="18" height="6.5" rx="2"/><circle cx="7" cy="7.2" r=".8"/><circle cx="7" cy="16.8" r=".8"/></g>
+      <text x="962" y="520" fill="#1d1d1f" font-size="14" font-weight="700">Integration</text>
+      <text x="962" y="537" fill="#6e6e73" font-size="11">:5300 · mail, SMS, AI, translate</text>
+    </g>
+<g id="n-db">
+      <rect id="halo-db" x="35" y="635" width="225" height="80" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="40" y="640" width="215" height="70" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="66" cy="675" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(54 663) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+      <text x="92" y="672" fill="#1d1d1f" font-size="14" font-weight="700">MySQL 8.4</text>
+      <text x="92" y="689" fill="#6e6e73" font-size="11">9 schemas · Docker</text>
+    </g>
+<g id="n-disk">
+      <rect id="halo-disk" x="265" y="635" width="200" height="80" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="270" y="640" width="190" height="70" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="296" cy="675" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(284 663) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g>
+      <text x="322" y="672" fill="#1d1d1f" font-size="14" font-weight="700">Disk storage</text>
+      <text x="322" y="689" fill="#6e6e73" font-size="11">uploaded images</text>
+    </g>
+<g id="n-ob">
+      <rect id="halo-ob" x="470" y="635" width="200" height="80" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="475" y="640" width="190" height="70" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="501" cy="675" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(489 663) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6.5L20.5 7"/></g>
+      <text x="527" y="672" fill="#1d1d1f" font-size="14" font-weight="700">Local outbox</text>
+      <text x="527" y="689" fill="#6e6e73" font-size="11">email · SMS · push</text>
+    </g>
+<g id="n-ana">
+      <rect id="halo-ana" x="675" y="635" width="255" height="80" rx="17" fill="#c77700" opacity="0"/>
+      <rect x="680" y="640" width="245" height="70" rx="13" fill="#ffffff" stroke="#c77700" stroke-width="1.6"/>
+      <circle cx="706" cy="675" r="17" fill="#c77700" fill-opacity=".16"/>
+      <g transform="translate(694 663) scale(1)" fill="none" stroke="#c77700" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5.5L19.5 10 14 12l-2 5.5L10 12 4.5 10 10 8.5z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></g>
+      <text x="732" y="672" fill="#1d1d1f" font-size="14" font-weight="700">Local clinical analyst</text>
+      <text x="732" y="689" fill="#6e6e73" font-size="11">rule-based · no cloud LLM</text>
+    </g>
+<g id="n-ext">
+      <rect id="halo-ext" x="935" y="635" width="230" height="80" rx="17" fill="#d03a3a" opacity="0"/>
+      <rect x="940" y="640" width="220" height="70" rx="13" fill="#ffffff" stroke="#d03a3a" stroke-width="1.6" stroke-dasharray="6 4"/>
+      <circle cx="966" cy="675" r="17" fill="#d03a3a" fill-opacity=".16"/>
+      <g transform="translate(954 663) scale(1)" fill="none" stroke="#d03a3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></g>
+      <text x="992" y="672" fill="#1d1d1f" font-size="14" font-weight="700">Google Translate</text>
+      <text x="992" y="689" fill="#6e6e73" font-size="11">optional · only online call</text>
+    </g>
+<circle r="4.5" fill="#6f4be8"><animateMotion dur="2.4s" begin="0s" repeatCount="indefinite" path="M290 523 L910 523"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#6f4be8"><animateMotion dur="2.4s" begin="1.3s" repeatCount="indefinite" path="M290 523 L910 523"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.4s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#c77700"><animateMotion dur="2.4s" begin="0.4s" repeatCount="indefinite" path="M1035 464 L1035 492"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.4s" begin="0.4s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#0f9d84"><animateMotion dur="2.4s" begin="0.2s" repeatCount="indefinite" path="M165 464 L165 492"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.4s" begin="0.2s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#0f9d84"><animateMotion dur="2.4s" begin="1.3s" repeatCount="indefinite" path="M165 464 L165 492"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.4s" begin="1.3s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#1f6fe5"><animateMotion dur="3.6s" begin="0s" repeatCount="indefinite" path="M410 216 L410 252 L1035 252"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="3.6s" begin="0s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#1f6fe5"><animateMotion dur="3.6s" begin="1.7s" repeatCount="indefinite" path="M410 216 L410 252 L1035 252"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="3.6s" begin="1.7s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#6f4be8"><animateMotion dur="1.8s" begin="0.3s" repeatCount="indefinite" path="M520 178 L580 168"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.3s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#1f6fe5"><animateMotion dur="3.6s" begin="0.8s" repeatCount="indefinite" path="M455 554 L455 550 L885 550 L885 523 L910 523"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="3.6s" begin="0.8s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#c77700"><animateMotion dur="1.8s" begin="0.6s" repeatCount="indefinite" path="M330 343 L290 343"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#d03a3a"><animateMotion dur="2.4s" begin="0.5s" repeatCount="indefinite" path="M1035 554 L1035 612 L1050 612 L1050 640"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="2.4s" begin="0.5s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#2a9d4b"><animateMotion dur="3.6s" begin="0.2s" repeatCount="indefinite" path="M165 554 L165 580 L1000 580"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="3.6s" begin="0.2s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#2a9d4b"><animateMotion dur="1.8s" begin="0.2s" repeatCount="indefinite" path="M147 580 L147 640"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#2a9d4b"><animateMotion dur="1.8s" begin="0.7s" repeatCount="indefinite" path="M365 580 L365 640"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.7s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#2a9d4b"><animateMotion dur="1.8s" begin="1s" repeatCount="indefinite" path="M570 580 L570 640"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="1s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#2a9d4b"><animateMotion dur="1.8s" begin="0.4s" repeatCount="indefinite" path="M802 580 L802 640"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#d93a72"><animateMotion dur="1.8s" begin="0s" repeatCount="indefinite" path="M210 126 L255 126 L255 178 L300 178"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#0f9d84"><animateMotion dur="1.8s" begin="0.5s" repeatCount="indefinite" path="M210 176 L255 176 L255 178 L300 178"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.5s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#c77700"><animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite" path="M210 224 L255 224 L255 178 L300 178"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.9s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#6f4be8"><animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite" path="M970 168 L990 168"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.9s" repeatCount="indefinite"/></circle>
+<circle r="4.5" fill="#6f4be8"><animateMotion dur="1.8s" begin="0.1s" repeatCount="indefinite" path="M760 168 L790 168"  calcMode="linear"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.9;1" dur="1.8s" begin="0.1s" repeatCount="indefinite"/></circle>
+<text x="40" y="778" fill="#6e6e73" font-size="12">Every box above runs on this machine. The only outbound call is the optional translation of user-written text; the whole interface is also pre-translated offline.</text>
+<text x="40" y="802" fill="#6e6e73" font-size="12">Legend:  <tspan fill="#1f6fe5">●</tspan> REST + JWT   <tspan fill="#6f4be8">●</tspan> service-to-service   <tspan fill="#2a9d4b">●</tspan> local data   <tspan fill="#d03a3a">●</tspan> optional internet</text>
+</svg>

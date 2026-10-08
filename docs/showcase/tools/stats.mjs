@@ -23,7 +23,7 @@ const out = {
   generatedAt: new Date().toISOString(),
   system: { services: 15, doctors: stats[0], patients: stats[1], appointments: stats[2], medicines: meds, equipment: stats[4].length, posts: stats[5].length + stats[6].length + stats[7].length + stats[8].length + stats[9].length, languages: 10 },
   code: { backendFiles: be.length, backendLines: lines(be), frontendFiles: fe.length, frontendLines: lines(fe), endpoints: count(be, /@(Get|Post|Put|Delete|Patch)Mapping/g), controllers: count(be, /@RestController/g), entities: count(be, /@Entity\b/g) },
-  quality: { e2eChecks: 12, screens: JSON.parse(readFileSync(join(HERE, "../site/data/shots.json"))).length, cloudDependencies: 0 },
+  quality: { e2eChecks: 12, screens: JSON.parse(readFileSync(join(HERE, "../deck/resources/site/data/shots.json"))).length, cloudDependencies: 0 },
 };
-writeFileSync(join(HERE, "../site/data/stats.json"), JSON.stringify(out, null, 1));
+writeFileSync(join(HERE, "../deck/resources/site/data/stats.json"), JSON.stringify(out, null, 1));
 console.log(JSON.stringify(out, null, 1));

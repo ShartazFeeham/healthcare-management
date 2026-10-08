@@ -11,7 +11,7 @@
 <body class="nojs">
 <script>document.body.className="js";</script>
 <div class="viewport" id="viewport"><main class="stage" id="stage">
-  <section class="slide right  " data-theme="light" data-id="title" data-index="0" data-device="pdash,ddash,adash"   aria-roledescription="slide" aria-label="1 of 14: EA Healthcare">
+  <section class="slide right  " data-theme="light" data-id="title" data-index="0" data-device="pdash,ddash,adash"   aria-roledescription="slide" aria-label="1 of 20: EA Healthcare">
     <p class="meta"><span>01</span>EA Healthcare</p>
     <div class="copy">
       <h2>A healthcare platform, built end to end.</h2>
@@ -20,10 +20,35 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">EA Healthcare is a full-stack platform for patients, doctors and a hospital front desk: fifteen services, a React app, and everything running locally.</aside>
   </section>
-  <section class="slide left  " data-theme="light" data-id="appointments" data-index="1" data-device="book1,book2,book3"   aria-roledescription="slide" aria-label="2 of 14: Appointments">
-    <p class="meta"><span>02</span>Appointments</p>
+  <section class="slide center no-device " data-theme="light" data-id="hld" data-index="1"    aria-roledescription="slide" aria-label="2 of 20: Architecture">
+    <p class="meta"><span>02</span>Architecture</p>
+    <div class="copy">
+      
+      
+      
+    </div>
+    
+    
+    <figure class="dia one"><img src="diagrams/architecture.svg" alt="High-level design: clients, Spring Cloud edge, 15 domain services, data and local infrastructure" loading="lazy"></figure>
+    <aside class="notes">High-level design. Clients reach the API gateway, which routes by role to fifteen Spring Boot services found through Eureka and configured from the config server. Each service owns its own MySQL schema, and every dependency runs on localhost.</aside>
+  </section>
+  <section class="slide center no-device " data-theme="light" data-id="flows" data-index="2"    aria-roledescription="slide" aria-label="3 of 20: Key flows">
+    <p class="meta"><span>03</span>Key flows</p>
+    <div class="copy">
+      
+      
+      
+    </div>
+    
+    
+    <div class="dia grid"><figure><img src="diagrams/flow-auth.svg" alt="Sign-up and secure login" loading="lazy"><figcaption>Sign-up and secure login</figcaption></figure><figure><img src="diagrams/flow-booking.svg" alt="Booking an appointment" loading="lazy"><figcaption>Booking an appointment</figcaption></figure><figure><img src="diagrams/flow-ai.svg" alt="AI-assisted health report" loading="lazy"><figcaption>AI-assisted health report</figcaption></figure><figure><img src="diagrams/flow-telemedicine.svg" alt="Telemedicine" loading="lazy"><figcaption>Telemedicine</figcaption></figure><figure><img src="diagrams/flow-i18n.svg" alt="Offline-first translation" loading="lazy"><figcaption>Offline-first translation</figcaption></figure><figure><img src="diagrams/flow-runner.svg" alt="One-command runner" loading="lazy"><figcaption>One-command runner</figcaption></figure></div>
+    <aside class="notes">The six key flows: sign-up and login with a one-time code, booking with live capacity, the AI report, telemedicine, offline translation, and the one-command runner. Each animation shows the real calls between services.</aside>
+  </section>
+  <section class="slide left  " data-theme="light" data-id="appointments" data-index="3" data-device="book1,book2,book3"   aria-roledescription="slide" aria-label="4 of 20: Appointments">
+    <p class="meta"><span>04</span>Appointments</p>
     <div class="copy">
       <h2>Book in a few taps.</h2>
       <ul class="phrases"><li data-img="0" class="first">Choose a doctor.</li><li data-img="1" >Pick a day and a slot.</li><li data-img="2" >Get reminded automatically.</li></ul>
@@ -31,10 +56,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">Slots have a capacity set by the doctor, booked counts are live, and a full slot is refused by the server. Reminders go out on their own.</aside>
   </section>
-  <section class="slide right  " data-theme="light" data-id="doctors" data-index="2" data-device="sched1,sched2,sched3"   aria-roledescription="slide" aria-label="3 of 14: Doctors">
-    <p class="meta"><span>03</span>Doctors</p>
+  <section class="slide right  " data-theme="light" data-id="doctors" data-index="4" data-device="sched1,sched2,sched3"   aria-roledescription="slide" aria-label="5 of 20: Doctors">
+    <p class="meta"><span>05</span>Doctors</p>
     <div class="copy">
       <h2>Doctors run their own day.</h2>
       <ul class="phrases"><li data-img="0" class="first">Set each day: in person, video or off.</li><li data-img="1" >Announce a delay in one step.</li><li data-img="2" >Join the video visit.</li></ul>
@@ -42,10 +68,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">Doctors choose in-person, telemedicine or off per shift, set the capacity, announce delays, and join calls from their dashboard.</aside>
   </section>
-  <section class="slide left  " data-theme="dark" data-id="video" data-index="3" data-device="call1,call2"   aria-roledescription="slide" aria-label="4 of 14: Video visits">
-    <p class="meta"><span>04</span>Video visits</p>
+  <section class="slide left  " data-theme="dark" data-id="video" data-index="5" data-device="call1,call2"   aria-roledescription="slide" aria-label="6 of 20: Video visits">
+    <p class="meta"><span>06</span>Video visits</p>
     <div class="copy">
       <h2>Video visits, no vendor.</h2>
       <ul class="phrases"><li data-img="0" class="first">Open the link.</li><li data-img="0" >The server checks the window.</li><li data-img="1" >Peer to peer, encrypted.</li></ul>
@@ -53,10 +80,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">The server decides who may join and when. Video then flows peer to peer over WebRTC, with signalling through the browser, so no video service is needed.</aside>
   </section>
-  <section class="slide right  " data-theme="light" data-id="report" data-index="4" data-device="rep1,rep2,rep3"   aria-roledescription="slide" aria-label="5 of 14: Health report">
-    <p class="meta"><span>05</span>Health report</p>
+  <section class="slide right  " data-theme="light" data-id="report" data-index="6" data-device="rep1,rep2,rep3"   aria-roledescription="slide" aria-label="7 of 20: Health report">
+    <p class="meta"><span>07</span>Health report</p>
     <div class="copy">
       <h2>A report that reads the whole record.</h2>
       <ul class="phrases"><li data-img="0" class="first">It reads the treatment history.</li><li data-img="1" >Finds two similar, anonymised cases.</li><li data-img="2" >Writes the report on the server.</li></ul>
@@ -64,10 +92,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">Similar cases are found by keyword overlap and anonymised. A local rule-based analyst writes three sections: overview, comparable outcomes and outlook. No cloud model is involved.</aside>
   </section>
-  <section class="slide left  " data-theme="light" data-id="community" data-index="5" data-device="com1,com2,com3"   aria-roledescription="slide" aria-label="6 of 14: Community">
-    <p class="meta"><span>06</span>Community</p>
+  <section class="slide left  " data-theme="light" data-id="community" data-index="7" data-device="com1,com2,com3"   aria-roledescription="slide" aria-label="8 of 20: Community">
+    <p class="meta"><span>08</span>Community</p>
     <div class="copy">
       <h2>A community that teaches.</h2>
       <ul class="phrases"><li data-img="0" class="first">Share and ask.</li><li data-img="1" >Read what doctors write.</li><li data-img="2" >Articles and first aid.</li></ul>
@@ -75,10 +104,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">Patients post updates and feedback, doctors publish articles and first-aid guides, admins post FAQs. Comments and reactions work on every post.</aside>
   </section>
-  <section class="slide right  " data-theme="light" data-id="search" data-index="6" data-device="sea1,sea2,sea3"   aria-roledescription="slide" aria-label="7 of 14: Search and libraries">
-    <p class="meta"><span>07</span>Search and libraries</p>
+  <section class="slide right  " data-theme="light" data-id="search" data-index="8" data-device="sea1,sea2,sea3"   aria-roledescription="slide" aria-label="9 of 20: Search and libraries">
+    <p class="meta"><span>09</span>Search and libraries</p>
     <div class="copy">
       <h2>Find anything.</h2>
       <ul class="phrases"><li data-img="0" class="first">Search the whole platform.</li><li data-img="1" >Look up 40 medicines.</li><li data-img="2" >Browse 12 pieces of equipment.</li></ul>
@@ -86,10 +116,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">One search fans out to patients, doctors, medicines, appointments and posts. The medicine and equipment libraries are public.</aside>
   </section>
-  <section class="slide left  " data-theme="light" data-id="languages" data-index="7" data-device="lang-english,lang-bengali,lang-hindi,lang-arabic,lang-spanish,lang-japanese"  data-dur="1900" aria-roledescription="slide" aria-label="8 of 14: Languages">
-    <p class="meta"><span>08</span>Languages</p>
+  <section class="slide left  " data-theme="light" data-id="languages" data-index="9" data-device="lang-english,lang-bengali,lang-hindi,lang-arabic,lang-spanish,lang-japanese"  data-dur="1900" aria-roledescription="slide" aria-label="10 of 20: Languages">
+    <p class="meta"><span>10</span>Languages</p>
     <div class="copy">
       <h2>Ten languages.</h2>
       <ul class="phrases"><li data-img="0" class="first">English</li><li data-img="1" >বাংলা</li><li data-img="2" >हिन्दी</li><li data-img="3" >العربية</li><li data-img="4" >Español</li><li data-img="5" >日本語</li></ul>
@@ -97,10 +128,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">Every interface string is translated per user from a dictionary shipped with the app, so it works offline. Ten languages, 330 stored translations.</aside>
   </section>
-  <section class="slide right  " data-theme="dark" data-id="offline" data-index="8" data-device="mail"   aria-roledescription="slide" aria-label="9 of 14: Offline">
-    <p class="meta"><span>09</span>Offline</p>
+  <section class="slide right  " data-theme="dark" data-id="offline" data-index="10" data-device="mail"   aria-roledescription="slide" aria-label="11 of 20: Offline">
+    <p class="meta"><span>11</span>Offline</p>
     <div class="copy">
       <h2>Works with no internet.</h2>
       <ul class="phrases"><li data-img="0" class="first">No email provider.</li><li data-img="0" >No SMS gateway.</li><li data-img="0" >Codes arrive in a local mailbox.</li></ul>
@@ -108,10 +140,11 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">There is no email, SMS or push provider. Messages go to a local outbox shown on a mailbox page, so one-time codes work on a plane. Only the optional translator uses the internet.</aside>
   </section>
-  <section class="slide left  " data-theme="light" data-id="admin" data-index="9" data-device="adm2,adm3,adm4"   aria-roledescription="slide" aria-label="10 of 14: Front desk">
-    <p class="meta"><span>10</span>Front desk</p>
+  <section class="slide left  " data-theme="light" data-id="admin" data-index="11" data-device="adm2,adm3,adm4"   aria-roledescription="slide" aria-label="12 of 20: Front desk">
+    <p class="meta"><span>12</span>Front desk</p>
     <div class="copy">
       <h2>The front desk, in control.</h2>
       <ul class="phrases"><li data-img="0" class="first">Approve doctors.</li><li data-img="1" >Assign rooms.</li><li data-img="2" >Read the statistics.</li></ul>
@@ -119,10 +152,59 @@
     </div>
     
     <div class="device"></div>
+    
     <aside class="notes">Admins approve doctors, allocate rooms, book walk-in patients, manage users, and read operational statistics.</aside>
   </section>
-  <section class="slide center no-device " data-theme="dark" data-id="madetrue" data-index="10"   data-dur="2600" aria-roledescription="slide" aria-label="11 of 14: Made true">
-    <p class="meta"><span>11</span>Made true</p>
+  <section class="slide left  " data-theme="light" data-id="tour-public" data-index="12" data-device="t-pub-01-home,t-pub-02-login,t-pub-03-login-bn,t-pub-04-register-patient,t-pub-05-register-doctor,t-pub-06-forgot,t-pub-07-mailbox,t-pub-08-medicines,t-pub-09-medicine-detail,t-pub-10-equipments,t-pub-11-equipment-detail,t-pub-12-search,t-pat-13-mobile-login"  data-dur="3600" aria-roledescription="slide" aria-label="13 of 20: Open to everyone">
+    <p class="meta"><span>13</span>Open to everyone</p>
+    <div class="copy">
+      <h2>Before you sign in.</h2>
+      <ul class="phrases"><li data-img="0" class="first">Landing page<small>A calm, patient-first front door: what the platform offers, who it is for, and one click to sign in or register.</small></li><li data-img="1" >Sign in<small>Email or user ID with password; accounts with two-factor enabled are asked for a one-time code.</small></li><li data-img="2" >Interface in Bengali<small>The UI is translated per user. Strings come from the i18n service, pre-translated so it also works offline.</small></li><li data-img="3" >Patient registration<small>Self-service sign-up with validation; a verification code is sent before the account unlocks.</small></li><li data-img="4" >Doctor onboarding<small>Doctors submit qualifications, certifications and license details; an administrator approves the account before first use.</small></li><li data-img="5" >Password recovery<small>OTP-based reset flow with a resend timer.</small></li><li data-img="6" >Local mailbox<small>Offline stand-in for email, SMS and push providers: every message the platform sends is captured and shown here, OTP codes highlighted.</small></li><li data-img="7" >Medicine library<small>Searchable, sortable catalogue with expiry filters, 40 medicines with warnings and adverse effects.</small></li><li data-img="8" >Medicine details<small>Classification, strength, warnings, adverse effects and manufacturer in one view.</small></li><li data-img="9" >Hospital equipment<small>Diagnostic and treatment equipment with availability and costing, bookable ahead of time.</small></li><li data-img="10" >Equipment details<small>Use cases, technical details, warnings and costing.</small></li><li data-img="11" >Unified search<small>One query fans out to patients, doctors, medicines, appointments and community posts through the help-desk service.</small></li><li data-img="12" >Mobile sign-in<small>Sign-in on a small screen.</small></li></ul>
+      
+    </div>
+    
+    <div class="device"></div>
+    
+    <aside class="notes">Landing page: A calm, patient-first front door: what the platform offers, who it is for, and one click to sign in or register. Sign in: Email or user ID with password; accounts with two-factor enabled are asked for a one-time code. Interface in Bengali: The UI is translated per user. Strings come from the i18n service, pre-translated so it also works offline. Patient registration: Self-service sign-up with validation; a verification code is sent before the account unlocks. Doctor onboarding: Doctors submit qualifications, certifications and license details; an administrator approves the account before first use. Password recovery: OTP-based reset flow with a resend timer. Local mailbox: Offline stand-in for email, SMS and push providers: every message the platform sends is captured and shown here, OTP codes highlighted. Medicine library: Searchable, sortable catalogue with expiry filters, 40 medicines with warnings and adverse effects. Medicine details: Classification, strength, warnings, adverse effects and manufacturer in one view. Hospital equipment: Diagnostic and treatment equipment with availability and costing, bookable ahead of time. Equipment details: Use cases, technical details, warnings and costing. Unified search: One query fans out to patients, doctors, medicines, appointments and community posts through the help-desk service. Mobile sign-in: Sign-in on a small screen.</aside>
+  </section>
+  <section class="slide right  " data-theme="light" data-id="tour-patient" data-index="13" data-device="t-pat-01-dashboard,t-pat-02-challenges,t-pat-03-find-doctor,t-pat-04-book,t-pat-05-profile,t-pat-06-ai-report,t-pat-07-edit-profile,t-pat-08-community,t-pat-09-post,t-pat-10-notifications,t-pat-11-settings,t-pat-12-mobile-dashboard"  data-dur="3600" aria-roledescription="slide" aria-label="14 of 20: Patient tour">
+    <p class="meta"><span>14</span>Patient tour</p>
+    <div class="copy">
+      <h2>A patient's whole day.</h2>
+      <ul class="phrases"><li data-img="0" class="first">Patient dashboard<small>Upcoming and completed appointments with room numbers, plus wellness challenges.</small></li><li data-img="1" >Wellness challenges<small>Gamified goals set by administrators; patients log daily scores and earn badges.</small></li><li data-img="2" >Find a doctor<small>Filter 30 specializations, see experience, treatments and availability at a glance.</small></li><li data-img="3" >Pick a slot<small>Choose a day within the next ten days and a morning, afternoon or evening slot, with live capacity and delay information.</small></li><li data-img="4" >Health profile<small>Vitals, allergies, lifestyle flags, treatments and achievements in one profile.</small></li><li data-img="5" >AI health analysis<small>A three-part report on the treatment history, comparable anonymised cases and what to do next. Generated on the platform's own server.</small></li><li data-img="6" >Edit health profile<small>Update vitals, allergies and contact info, with photo upload.</small></li><li data-img="7" >Community feed<small>Status posts, doctor-written articles, first-aid guides and FAQs, with reactions and comments.</small></li><li data-img="8" >Post and discussion<small>Threaded comments with doctor replies, and one-click translation of any post.</small></li><li data-img="9" >Notifications<small>Appointment reminders, community activity and site announcements, with unread tracking.</small></li><li data-img="10" >Settings<small>Choose notification channels and the interface language.</small></li><li data-img="11" >Responsive on mobile<small>The same dashboard on a phone-sized screen.</small></li></ul>
+      
+    </div>
+    
+    <div class="device"></div>
+    
+    <aside class="notes">Patient dashboard: Upcoming and completed appointments with room numbers, plus wellness challenges. Wellness challenges: Gamified goals set by administrators; patients log daily scores and earn badges. Find a doctor: Filter 30 specializations, see experience, treatments and availability at a glance. Pick a slot: Choose a day within the next ten days and a morning, afternoon or evening slot, with live capacity and delay information. Health profile: Vitals, allergies, lifestyle flags, treatments and achievements in one profile. AI health analysis: A three-part report on the treatment history, comparable anonymised cases and what to do next. Generated on the platform's own server. Edit health profile: Update vitals, allergies and contact info, with photo upload. Community feed: Status posts, doctor-written articles, first-aid guides and FAQs, with reactions and comments. Post and discussion: Threaded comments with doctor replies, and one-click translation of any post. Notifications: Appointment reminders, community activity and site announcements, with unread tracking. Settings: Choose notification channels and the interface language. Responsive on mobile: The same dashboard on a phone-sized screen.</aside>
+  </section>
+  <section class="slide left  " data-theme="light" data-id="tour-doctor" data-index="14" data-device="t-doc-01-dashboard,t-doc-02-schedule,t-doc-03-profile,t-doc-04-edit-profile,t-doc-05-treatment,t-doc-06-patients,t-doc-07-patient-record,t-doc-08-community,t-doc-09-call"  data-dur="3600" aria-roledescription="slide" aria-label="15 of 20: Doctor tour">
+    <p class="meta"><span>15</span>Doctor tour</p>
+    <div class="copy">
+      <h2>A doctor's whole day.</h2>
+      <ul class="phrases"><li data-img="0" class="first">Doctor dashboard<small>Today's queue: upcoming in-person and telemedicine consultations with join-call buttons, and completed visits.</small></li><li data-img="1" >Schedule management<small>Pick a day, choose in-person, telemedicine or off for each shift and set the capacity per slot.</small></li><li data-img="2" >Public doctor profile<small>Bio, qualifications, certifications, availability for the next days and verified patient reviews.</small></li><li data-img="3" >Edit profile<small>Doctors maintain their own bio, specialization and credentials.</small></li><li data-img="4" >Write a treatment record<small>Structured treatment notes that feed the clinical decision support engine.</small></li><li data-img="5" >Patient directory<small>Doctors can open any patient's health profile and history.</small></li><li data-img="6" >Patient record with AI analysis<small>Health data, treatment history and the AI-assisted analysis in one place.</small></li><li data-img="7" >Articles and first aid<small>Doctors publish articles and first-aid guides for the whole community.</small></li><li data-img="8" >Telemedicine call<small>Peer-to-peer WebRTC video room, access verified against the appointment window. Works with no cloud video service.</small></li></ul>
+      
+    </div>
+    
+    <div class="device"></div>
+    
+    <aside class="notes">Doctor dashboard: Today's queue: upcoming in-person and telemedicine consultations with join-call buttons, and completed visits. Schedule management: Pick a day, choose in-person, telemedicine or off for each shift and set the capacity per slot. Public doctor profile: Bio, qualifications, certifications, availability for the next days and verified patient reviews. Edit profile: Doctors maintain their own bio, specialization and credentials. Write a treatment record: Structured treatment notes that feed the clinical decision support engine. Patient directory: Doctors can open any patient's health profile and history. Patient record with AI analysis: Health data, treatment history and the AI-assisted analysis in one place. Articles and first aid: Doctors publish articles and first-aid guides for the whole community. Telemedicine call: Peer-to-peer WebRTC video room, access verified against the appointment window. Works with no cloud video service.</aside>
+  </section>
+  <section class="slide right  " data-theme="light" data-id="tour-admin" data-index="15" data-device="t-adm-01-dashboard,t-adm-02-rooms,t-adm-03-doctors,t-adm-04-patients,t-adm-05-statistics,t-adm-06-walkin,t-adm-07-create-admin,t-adm-08-create-medicine,t-adm-09-create-equipment,t-adm-10-community,t-adm-11-settings"  data-dur="3600" aria-roledescription="slide" aria-label="16 of 20: Admin tour">
+    <p class="meta"><span>16</span>Admin tour</p>
+    <div class="copy">
+      <h2>Everything at the front desk.</h2>
+      <ul class="phrases"><li data-img="0" class="first">Admin dashboard<small>Walk-in appointments, doctor rooms, user management and statistics behind one tabbed console.</small></li><li data-img="1" >Room allocation<small>Assign every doctor a consultation room; patients see the room on their appointment.</small></li><li data-img="2" >Doctor management<small>Approve, deactivate or review doctors; new doctors stay inactive until an administrator verifies them.</small></li><li data-img="3" >Patient management<small>Browse patients, open their health data and manage account status.</small></li><li data-img="4" >Operational statistics<small>Appointment volume per day, shift distribution and consultation types, computed in the appointment service.</small></li><li data-img="5" >Walk-in booking<small>The front desk books in-person visits for unregistered patients.</small></li><li data-img="6" >Create administrator<small>Administrators are created by existing administrators only.</small></li><li data-img="7" >Add a medicine<small>Full pharmacological record with photo upload to the local file service.</small></li><li data-img="8" >Add equipment<small>Equipment records with use cases, warnings and pricing.</small></li><li data-img="9" >Community moderation<small>Admins can publish announcements and FAQs and remove any post.</small></li><li data-img="10" >Notification and language settings<small>Per-user channel preferences (email, SMS, push), do-not-disturb and interface language.</small></li></ul>
+      
+    </div>
+    
+    <div class="device"></div>
+    
+    <aside class="notes">Admin dashboard: Walk-in appointments, doctor rooms, user management and statistics behind one tabbed console. Room allocation: Assign every doctor a consultation room; patients see the room on their appointment. Doctor management: Approve, deactivate or review doctors; new doctors stay inactive until an administrator verifies them. Patient management: Browse patients, open their health data and manage account status. Operational statistics: Appointment volume per day, shift distribution and consultation types, computed in the appointment service. Walk-in booking: The front desk books in-person visits for unregistered patients. Create administrator: Administrators are created by existing administrators only. Add a medicine: Full pharmacological record with photo upload to the local file service. Add equipment: Equipment records with use cases, warnings and pricing. Community moderation: Admins can publish announcements and FAQs and remove any post. Notification and language settings: Per-user channel preferences (email, SMS, push), do-not-disturb and interface language.</aside>
+  </section>
+  <section class="slide center no-device " data-theme="dark" data-id="madetrue" data-index="16"   data-dur="2600" aria-roledescription="slide" aria-label="17 of 20: Made true">
+    <p class="meta"><span>17</span>Made true</p>
     <div class="copy">
       <h2>Made true.</h2>
       <ul class="phrases"><li data-img="0" class="first"><s>Any signed-in user could deactivate accounts.</s><b>Now admins only.</b></li><li data-img="0" ><s>Doctor passwords were stored in plaintext.</s><b>Hashed once, in one place.</b></li><li data-img="0" ><s>The AI report crashed on every call.</s><b>It works on copies.</b></li><li data-img="0" ><s>Video join window was inverted.</s><b>5 minutes before to 20 after.</b></li><li data-img="0" ><s>A render loop flooded the browser.</s><b>One request per string.</b></li><li data-img="0" ><s>Mock data looked like real data.</s><b>Wired to the services.</b></li><li data-img="0" ><s>Six cloud services, keys in source.</s><b>Zero cloud dependencies.</b></li></ul>
@@ -130,10 +212,11 @@
     </div>
     
     
+    
     <aside class="notes">Seven real defects found by reading the code and running every screen as each role. Each has a real fix and is covered by the end-to-end suite.</aside>
   </section>
-  <section class="slide right  " data-theme="light" data-id="command" data-index="11"  data-terminal="1" data-dur="2300" aria-roledescription="slide" aria-label="12 of 14: One command">
-    <p class="meta"><span>12</span>One command</p>
+  <section class="slide right  " data-theme="light" data-id="command" data-index="17"  data-terminal="1" data-dur="2300" aria-roledescription="slide" aria-label="18 of 20: One command">
+    <p class="meta"><span>18</span>One command</p>
     <div class="copy">
       <h2>One command.</h2>
       <ul class="phrases"><li data-img="0" class="first">Cleans everything.</li><li data-img="1" >Starts MySQL in Docker.</li><li data-img="2" >Builds and starts 15 services.</li><li data-img="3" >Seeds realistic data.</li></ul>
@@ -163,10 +246,11 @@
   ✓ cdss (:7800)
   ✓ gateway (:9999)</pre></div>
     
+    
     <aside class="notes">runner.sh 5 cleans, starts MySQL in Docker, builds and starts all services and the web app, then seeds realistic data. I can rebuild the whole system from nothing.</aside>
   </section>
-  <section class="slide center no-device big" data-theme="dark" data-id="numbers" data-index="12"   data-dur="2200" aria-roledescription="slide" aria-label="13 of 14: Numbers">
-    <p class="meta"><span>13</span>Numbers</p>
+  <section class="slide center no-device big" data-theme="dark" data-id="numbers" data-index="18"   data-dur="2200" aria-roledescription="slide" aria-label="19 of 20: Numbers">
+    <p class="meta"><span>19</span>Numbers</p>
     <div class="copy">
       
       <ul class="phrases"><li data-img="0" class="first"><b>15</b> services</li><li data-img="0" ><b>165</b> endpoints</li><li data-img="0" ><b>54</b> users</li><li data-img="0" ><b>2,011</b> appointments</li><li data-img="0" ><b>12/12</b> checks pass</li></ul>
@@ -174,15 +258,17 @@
     </div>
     
     
+    
     <aside class="notes">Real counts from the running system: fifteen services, 165 endpoints, 54 seeded users, 2,011 appointments, and 12 of 12 end-to-end checks passing.</aside>
   </section>
-  <section class="slide center no-device " data-theme="light" data-id="close" data-index="13"    aria-roledescription="slide" aria-label="14 of 14: Thank you">
-    <p class="meta"><span>14</span>Thank you</p>
+  <section class="slide center no-device " data-theme="light" data-id="close" data-index="19"    aria-roledescription="slide" aria-label="20 of 20: Thank you">
+    <p class="meta"><span>20</span>Thank you</p>
     <div class="copy">
       <h2>Make it work. Then make it true.</h2>
       
       <p class="sub">Shartaz Yeasar Feeham</p>
     </div>
+    
     
     
     <aside class="notes">Getting something to run is the easy half. The rest is making what it says match what it does.</aside>

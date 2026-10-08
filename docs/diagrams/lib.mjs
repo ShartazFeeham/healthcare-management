@@ -1,7 +1,12 @@
 // Tiny SVG diagram toolkit: icon nodes, edges and SMIL-animated "packets" that travel along edges.
 // No dependencies; output renders in browsers, GitHub READMEs, and frame-by-frame for GIF export.
-export const C = {
-  bg: "#0e1a2b", card: "#16263d", line: "#2b4468", text: "#e8f0ff", muted: "#8ea6c9",
+// THEME=light renders the white variant (used by the showcase deck); default is the dark README theme.
+export const LIGHT = process.env.THEME === "light";
+export const C = LIGHT ? {
+  bg: "#ffffff", card: "#ffffff", line: "#c7d0dc", text: "#1d1d1f", muted: "#6e6e73", on: "#ffffff",
+  blue: "#1f6fe5", teal: "#0f9d84", amber: "#c77700", pink: "#d93a72", violet: "#6f4be8", green: "#2a9d4b", red: "#d03a3a",
+} : {
+  bg: "#0e1a2b", card: "#16263d", line: "#2b4468", text: "#e8f0ff", muted: "#8ea6c9", on: "#06101f",
   blue: "#3d8bff", teal: "#22c7a9", amber: "#ffb84d", pink: "#ff6f91", violet: "#9a7bff", green: "#4cd964", red: "#ff5c5c",
 };
 
@@ -74,7 +79,7 @@ export class Diagram {
     this.layers.edges.push(`<path id="e-${id}" d="${d}" fill="none" stroke="${color}" stroke-width="${width}"${dashed ? ' stroke-dasharray="6 5"' : ""} stroke-linecap="round" stroke-linejoin="round"/>`);
     this.edgePaths = this.edgePaths || {}; this.edgePaths[id] = d;
   }
-  badge(id, text, color = C.teal) { const n = this.nodes.get(id); this.layers.nodes.push(`<g><rect x="${n.x + n.w - 52}" y="${n.y - 9}" width="46" height="18" rx="9" fill="${color}"/><text x="${n.x + n.w - 29}" y="${n.y + 3.500}" text-anchor="middle" font-size="10" font-weight="800" fill="#06101f">${text}</text></g>`); }
+  badge(id, text, color = C.teal) { const n = this.nodes.get(id); this.layers.nodes.push(`<g><rect x="${n.x + n.w - 52}" y="${n.y - 9}" width="46" height="18" rx="9" fill="${color}"/><text x="${n.x + n.w - 29}" y="${n.y + 3.500}" text-anchor="middle" font-size="10" font-weight="800" fill="${C.on}">${text}</text></g>`); }
   // A dot that loops along an edge: continuous ambient traffic.
   flow(edgeId, { color = C.blue, dur = 3, begin = 0, reverse = false, r = 4.5 } = {}) {
     const d = this.edgePaths[edgeId];
@@ -97,17 +102,17 @@ export class Diagram {
       const pts = d.match(/-?\d+\.?\d*/g).map(Number); const poly = []; for (let k = 0; k < pts.length; k += 2) poly.push([pts[k], pts[k + 1]]);
       const segLen = (a, b) => Math.hypot(b[0] - a[0], b[1] - a[1]); let total = 0; for (let k = 1; k < poly.length; k++) total += segLen(poly[k - 1], poly[k]);
       let acc = 0, mid = poly[0]; for (let k = 1; k < poly.length; k++) { const L = segLen(poly[k - 1], poly[k]); if (acc + L >= total / 2) { const f = (total / 2 - acc) / L; mid = [poly[k - 1][0] + (poly[k][0] - poly[k - 1][0]) * f, poly[k - 1][1] + (poly[k][1] - poly[k - 1][1]) * f]; break; } acc += L; }
-      this.layers.anim.push(`<g opacity="0"><circle cx="${mid[0]}" cy="${mid[1]}" r="11" fill="${col}"/><text x="${mid[0]}" y="${mid[1] + 4.5}" text-anchor="middle" font-size="12" font-weight="800" fill="#06101f">${i + 1}</text>${on("0;0;1;1;0;0")}</g>`);
+      this.layers.anim.push(`<g opacity="0"><circle cx="${mid[0]}" cy="${mid[1]}" r="11" fill="${col}"/><text x="${mid[0]}" y="${mid[1] + 4.5}" text-anchor="middle" font-size="12" font-weight="800" fill="${C.on}">${i + 1}</text>${on("0;0;1;1;0;0")}</g>`);
       const tgt = s.to; if (tgt) this.layers.anim.push(`<use href="#halo-${tgt}" opacity="0" style="fill:${col}">${on("0;0;.32;.32;0;0")}</use>`);
       // caption
-      this.layers.text.push(`<g opacity="0"><rect x="30" y="${this.h - 62}" width="${this.w - 60}" height="40" rx="12" fill="${C.card}" stroke="${col}" stroke-opacity=".7"/><circle cx="58" cy="${this.h - 42}" r="12" fill="${col}"/><text x="58" y="${this.h - 37.500}" text-anchor="middle" font-size="13" font-weight="800" fill="#06101f">${i + 1}</text><text x="82" y="${this.h - 37}" font-size="14" fill="${C.text}">${s.caption}</text>${on("0;0;1;1;0;0")}</g>`);
+      this.layers.text.push(`<g opacity="0"><rect x="30" y="${this.h - 62}" width="${this.w - 60}" height="40" rx="12" fill="${C.card}" stroke="${col}" stroke-opacity=".7"/><circle cx="58" cy="${this.h - 42}" r="12" fill="${col}"/><text x="58" y="${this.h - 37.500}" text-anchor="middle" font-size="13" font-weight="800" fill="${C.on}">${i + 1}</text><text x="82" y="${this.h - 37}" font-size="14" fill="${C.text}">${s.caption}</text>${on("0;0;1;1;0;0")}</g>`);
     });
   }
   svg() {
     return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ${this.w} ${this.h}" width="${this.w}" height="${this.h}" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1626"/><stop offset="1" stop-color="#14263f"/></linearGradient>
+${LIGHT ? `<rect width="${this.w}" height="${this.h}" rx="22" fill="#fff" stroke="#e5e5ea"/>` : `<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1626"/><stop offset="1" stop-color="#14263f"/></linearGradient>
 <radialGradient id="glow" cx=".15" cy=".1" r=".9"><stop offset="0" stop-color="#3d8bff" stop-opacity=".22"/><stop offset="1" stop-color="#3d8bff" stop-opacity="0"/></radialGradient></defs>
-<rect width="${this.w}" height="${this.h}" rx="22" fill="url(#bg)"/><rect width="${this.w}" height="${this.h}" rx="22" fill="url(#glow)"/>
+<rect width="${this.w}" height="${this.h}" rx="22" fill="url(#bg)"/><rect width="${this.w}" height="${this.h}" rx="22" fill="url(#glow)"/>`}
 <text x="30" y="40" fill="${C.text}" font-size="21" font-weight="800">${this.title}</text>
 <text x="30" y="62" fill="${C.muted}" font-size="13">${this.subtitle || ""}</text>
 ${this.layers.bg.join("\n")}

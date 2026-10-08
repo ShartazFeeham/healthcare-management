@@ -1,17 +1,13 @@
-// Serves ./site on http://localhost:4000 (override with PORT). No dependencies.
+// Serves the presentation (./deck) on http://localhost:4000 (override with PORT). No dependencies.
 import { createServer } from "node:http";
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { extname, join, normalize, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-const base = resolve(fileURLToPath(new URL(".", import.meta.url)));
-const root = join(base, "site");
-// Showcase #1 lives at / (and /site/), #2 "Ward Round" at /ward-round/, #3 the presentation at /deck/, #4 the recorded film at /onetake/.
+const root = join(resolve(fileURLToPath(new URL(".", import.meta.url))), "deck");
 const types = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".mjs": "text/javascript", ".json": "application/json", ".jpg": "image/jpeg", ".png": "image/png", ".gif": "image/gif", ".svg": "image/svg+xml", ".webp": "image/webp", ".ico": "image/x-icon" };
 createServer((req, res) => {
-  const urlPath = normalize(decodeURIComponent(req.url.split("?")[0]));
-  const second = urlPath.startsWith("/ward-round") || urlPath.startsWith("/deck") || urlPath.startsWith("/onetake"), asSite = urlPath.startsWith("/site/");
-  let file = second ? join(base, urlPath) : asSite ? join(base, urlPath) : join(root, urlPath);
-  if (!file.startsWith(base)) { res.writeHead(403); return res.end(); }
+  let file = join(root, normalize(decodeURIComponent(req.url.split("?")[0])));
+  if (!file.startsWith(root)) { res.writeHead(403); return res.end(); }
   if (existsSync(file) && statSync(file).isDirectory()) file = join(file, "index.html");
   if (!existsSync(file)) { res.writeHead(404); return res.end("Not found"); }
   res.writeHead(200, { "Content-Type": types[extname(file)] || "application/octet-stream", "Cache-Control": "no-cache" });

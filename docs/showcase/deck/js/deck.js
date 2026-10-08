@@ -28,7 +28,7 @@
     var mode = root.dataset.mode, folder = mode === "phone" ? "m" : "d";
     slides.forEach(function (sl) {
       var host = $(".device", sl); if (!host) return;
-      var ids = sl.dataset.device.split(","), imgs = ids.map(function (id, i) { return '<img data-src="assets/' + folder + "/" + id + '.jpg" alt="' + sl.getAttribute("aria-label").replace(/^\d+ of \d+: /, "") + ' screen ' + (i + 1) + '" decoding="async">'; }).join("");
+      var ids = sl.dataset.device.split(","), imgs = ids.map(function (id, i) { return '<img data-src="assets/' + folder + "/" + id + '.jpg" alt="' + sl.getAttribute("aria-label").replace(/^\d+ of \d+: /, "") + ' screen ' + (i + 1) + '" decoding="async" onerror="this.onerror=null;this.src=this.src.replace(\'/m/\',\'/d/\')">'; }).join("");
       host.innerHTML = mode === "phone" ? '<div class="phone"><div class="screen"><div class="island"></div>' + imgs + "</div></div>" : '<div class="mac"><div class="glass"><div class="screen"><div class="inner">' + imgs + '</div></div></div><div class="neck"></div><div class="base"></div></div>';
     });
     if (cur >= 0) { loadImages(cur); showImage(cur, imgFor(slides[cur], phraseIdx)); }

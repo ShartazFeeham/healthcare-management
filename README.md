@@ -54,10 +54,7 @@ The first build downloads Gradle and npm dependencies once. After that, everythi
 | Web app | http://localhost:3100 |
 | Local mailbox (OTP codes, reminders, alerts) | http://localhost:3100/common/mailbox |
 | Eureka registry | http://localhost:8761 |
-| Showcase #1: product case study | `cd docs/showcase && npm start` → http://localhost:4000 |
-| Showcase #2: "Ward Round" clinical chart | http://localhost:4000/ward-round/ |
-| Showcase #3: slide presentation (Mac monitor on desktop, phone on mobile) | http://localhost:4000/deck/ |
-| Showcase #4: "One Take", a recorded film built from real frames and requests | http://localhost:4000/onetake/ |
+| Showcase: slide presentation (Mac monitor on desktop, phone on mobile) | `cd docs/showcase && npm start` → http://localhost:4000 |
 
 ### Demo accounts (created by the seeder)
 
@@ -125,24 +122,24 @@ All 54 accounts are listed in `docs/seeder/last-run.json` after seeding. New acc
 
 ## Screens
 
-The showcase sites in `docs/showcase` (a product tour and a clinical-chart case study, "Ward Round") present all 46 screens with captions. A few of them:
+The showcase in `docs/showcase` (a slide presentation) presents all 46 screens with captions. A few of them:
 
 <table>
 <tr>
-<td><img src="docs/showcase/site/assets/shots/pat-06-ai-report.jpg" alt="AI report"><br><sub>AI health analysis</sub></td>
-<td><img src="docs/showcase/site/assets/shots/adm-05-statistics.jpg" alt="Statistics"><br><sub>Operational statistics</sub></td>
-<td><img src="docs/showcase/site/assets/shots/pat-04-book.jpg" alt="Booking"><br><sub>Slot booking</sub></td>
+<td><img src="docs/showcase/deck/resources/site/assets/shots/pat-06-ai-report.jpg" alt="AI report"><br><sub>AI health analysis</sub></td>
+<td><img src="docs/showcase/deck/resources/site/assets/shots/adm-05-statistics.jpg" alt="Statistics"><br><sub>Operational statistics</sub></td>
+<td><img src="docs/showcase/deck/resources/site/assets/shots/pat-04-book.jpg" alt="Booking"><br><sub>Slot booking</sub></td>
 </tr>
 <tr>
-<td><img src="docs/showcase/site/assets/shots/doc-09-call.jpg" alt="Call"><br><sub>Telemedicine call</sub></td>
-<td><img src="docs/showcase/site/assets/shots/pat-08-community.jpg" alt="Community"><br><sub>Community</sub></td>
-<td><img src="docs/showcase/site/assets/shots/pub-03-login-bn.jpg" alt="Bengali"><br><sub>Interface in Bengali</sub></td>
+<td><img src="docs/showcase/deck/resources/site/assets/shots/doc-09-call.jpg" alt="Call"><br><sub>Telemedicine call</sub></td>
+<td><img src="docs/showcase/deck/resources/site/assets/shots/pat-08-community.jpg" alt="Community"><br><sub>Community</sub></td>
+<td><img src="docs/showcase/deck/resources/site/assets/shots/pub-03-login-bn.jpg" alt="Bengali"><br><sub>Interface in Bengali</sub></td>
 </tr>
 </table>
 
 ## Engineering notes
 
-A hardening pass made the project runnable end to end. Highlights (full list in the showcase site):
+A hardening pass made the project runnable end to end. Highlights (full list in the showcase):
 
 - Removed committed cloud credentials and replaced every integration with a local equivalent. **Rotate the keys that were in git history** (OpenAI, Twilio, Azure, Gmail app password, Firebase): they were exposed before this change.
 - Fixed authorization rules that matched no real route (any signed-in user could deactivate or suspend accounts) and stopped persisting doctor passwords in plaintext.
@@ -164,7 +161,7 @@ docs/
   seeder/                seed.mjs, realistic data, translation dictionary
   tests/e2e.mjs          UI end-to-end checks (headless Chrome)
   diagrams/              animated SVG/GIF architecture and flows (+ generator)
-  showcase/              portfolio site, screenshot tour, stats
+  showcase/              slide presentation, screenshot tour, stats
 ```
 
 ## Testing

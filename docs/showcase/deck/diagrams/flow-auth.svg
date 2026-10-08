@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 450" width="1200" height="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<rect width="1200" height="450" rx="22" fill="#fff" stroke="#e5e5ea"/>
+<text x="30" y="40" fill="#1d1d1f" font-size="21" font-weight="800">Sign-up and secure login</text>
+<text x="30" y="62" fill="#6e6e73" font-size="13">Accounts start locked; a one-time code delivered to the local mailbox unlocks them</text>
+
+<path id="e-e1" d="M250 185 L330 185" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e2" d="M540 185 L620 185" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e3" d="M830 185 L910 185" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e4" d="M725 220 L725 300" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e5" d="M1035 220 L1035 300" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="e-e6" d="M910 335 L560 335 L145 335 L145 220" fill="none" stroke="#c7d0dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="n-spa">
+      <rect id="halo-spa" x="35" y="145" width="220" height="80" rx="17" fill="#1f6fe5" opacity="0"/>
+      <rect x="40" y="150" width="210" height="70" rx="13" fill="#ffffff" stroke="#1f6fe5" stroke-width="1.6"/>
+      <circle cx="66" cy="185" r="17" fill="#1f6fe5" fill-opacity=".16"/>
+      <g transform="translate(54 173) scale(1)" fill="none" stroke="#1f6fe5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 9h19"/><circle cx="5.5" cy="6.5" r=".6"/><circle cx="8" cy="6.5" r=".6"/></g>
+      <text x="92" y="182" fill="#1d1d1f" font-size="14" font-weight="700">React SPA</text>
+      <text x="92" y="199" fill="#6e6e73" font-size="11">register · verify · login</text>
+    </g>
+<g id="n-pat">
+      <rect id="halo-pat" x="325" y="145" width="220" height="80" rx="17" fill="#d93a72" opacity="0"/>
+      <rect x="330" y="150" width="210" height="70" rx="13" fill="#ffffff" stroke="#d93a72" stroke-width="1.6"/>
+      <circle cx="356" cy="185" r="17" fill="#d93a72" fill-opacity=".16"/>
+      <g transform="translate(344 173) scale(1)" fill="none" stroke="#d93a72" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.2C2 7.4 4.2 5 7 5c1.9 0 3.4 1 5 3 1.6-2 3.1-3 5-3 2.8 0 5 2.4 4 5.8C19.500 15.400 12 20 12 20z"/></g>
+      <text x="382" y="182" fill="#1d1d1f" font-size="14" font-weight="700">Patients service</text>
+      <text x="382" y="199" fill="#6e6e73" font-size="11">POST /patients/register</text>
+    </g>
+<g id="n-acc">
+      <rect id="halo-acc" x="615" y="145" width="220" height="80" rx="17" fill="#c77700" opacity="0"/>
+      <rect x="620" y="150" width="210" height="70" rx="13" fill="#ffffff" stroke="#c77700" stroke-width="1.6"/>
+      <circle cx="646" cy="185" r="17" fill="#c77700" fill-opacity=".16"/>
+      <g transform="translate(634 173) scale(1)" fill="none" stroke="#c77700" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g>
+      <text x="672" y="182" fill="#1d1d1f" font-size="14" font-weight="700">Account service</text>
+      <text x="672" y="199" fill="#6e6e73" font-size="11">BCrypt · JWT · roles</text>
+    </g>
+<g id="n-int">
+      <rect id="halo-int" x="905" y="145" width="260" height="80" rx="17" fill="#6f4be8" opacity="0"/>
+      <rect x="910" y="150" width="250" height="70" rx="13" fill="#ffffff" stroke="#6f4be8" stroke-width="1.6"/>
+      <circle cx="936" cy="185" r="17" fill="#6f4be8" fill-opacity=".16"/>
+      <g transform="translate(924 173) scale(1)" fill="none" stroke="#6f4be8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6.5" rx="2"/><rect x="3" y="13.5" width="18" height="6.5" rx="2"/><circle cx="7" cy="7.2" r=".8"/><circle cx="7" cy="16.8" r=".8"/></g>
+      <text x="962" y="182" fill="#1d1d1f" font-size="14" font-weight="700">Integration service</text>
+      <text x="962" y="199" fill="#6e6e73" font-size="11">email channel</text>
+    </g>
+<g id="n-db">
+      <rect id="halo-db" x="615" y="295" width="220" height="80" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="620" y="300" width="210" height="70" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="646" cy="335" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(634 323) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></g>
+      <text x="672" y="332" fill="#1d1d1f" font-size="14" font-weight="700">MySQL · accounts</text>
+      <text x="672" y="349" fill="#6e6e73" font-size="11">locked until OTP</text>
+    </g>
+<g id="n-box">
+      <rect id="halo-box" x="905" y="295" width="260" height="80" rx="17" fill="#2a9d4b" opacity="0"/>
+      <rect x="910" y="300" width="250" height="70" rx="13" fill="#ffffff" stroke="#2a9d4b" stroke-width="1.6"/>
+      <circle cx="936" cy="335" r="17" fill="#2a9d4b" fill-opacity=".16"/>
+      <g transform="translate(924 323) scale(1)" fill="none" stroke="#2a9d4b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6.5L20.5 7"/></g>
+      <text x="962" y="332" fill="#1d1d1f" font-size="14" font-weight="700">Local mailbox</text>
+      <text x="962" y="349" fill="#6e6e73" font-size="11">OTP shown in the UI</text>
+    </g>
+<path d="M250 185 L330 185" fill="none" stroke="#1f6fe5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#1f6fe5" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M250 185 L330 185" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.00676;0.13514;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="290" cy="185" r="11" fill="#1f6fe5"/><text x="290" y="189.5" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">1</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-pat" opacity="0" style="fill:#1f6fe5"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M540 185 L620 185" fill="none" stroke="#d93a72" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#d93a72" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M540 185 L620 185" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.15541;0.28378;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="580" cy="185" r="11" fill="#d93a72"/><text x="580" y="189.5" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">2</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-acc" opacity="0" style="fill:#d93a72"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M725 220 L725 300" fill="none" stroke="#c77700" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#c77700" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M725 220 L725 300" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.30405;0.43243;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="725" cy="260" r="11" fill="#c77700"/><text x="725" y="264.5" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">3</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-db" opacity="0" style="fill:#c77700"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M830 185 L910 185" fill="none" stroke="#c77700" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#c77700" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M830 185 L910 185" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.4527;0.58108;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="870" cy="185" r="11" fill="#c77700"/><text x="870" y="189.5" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">4</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-int" opacity="0" style="fill:#c77700"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M1035 220 L1035 300" fill="none" stroke="#6f4be8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#6f4be8" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M1035 220 L1035 300" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.60135;0.72973;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="1035" cy="260" r="11" fill="#6f4be8"/><text x="1035" y="264.5" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">5</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-box" opacity="0" style="fill:#6f4be8"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></use>
+<path d="M910 335 L560 335 L145 335 L145 220" fill="none" stroke="#2a9d4b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></path>
+<circle r="7" fill="#2a9d4b" opacity="0"><animateMotion dur="14.8s" repeatCount="indefinite" path="M910 335 L560 335 L145 335 L145 220" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.75;0.87838;1"/><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></circle>
+<g opacity="0"><circle cx="470" cy="335" r="11" fill="#2a9d4b"/><text x="470" y="339.5" text-anchor="middle" font-size="12" font-weight="800" fill="#ffffff">6</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></g>
+<use href="#halo-spa" opacity="0" style="fill:#2a9d4b"><animate attributeName="opacity" values="0;0;.32;.32;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></use>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#ffffff" stroke="#1f6fe5" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#1f6fe5"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">1</text><text x="82" y="413" font-size="14" fill="#1d1d1f">Patient submits the registration form (validated in the browser and again on the server).</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0;0.00811;0.14054;0.14865;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#ffffff" stroke="#d93a72" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#d93a72"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">2</text><text x="82" y="413" font-size="14" fill="#1d1d1f">Patients service creates the profile and asks Account to create the login with the same user ID (PER1).</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.14865;0.15676;0.28919;0.2973;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#ffffff" stroke="#c77700" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#c77700"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">3</text><text x="82" y="413" font-size="14" fill="#1d1d1f">Account stores a BCrypt password hash, marks the account locked and generates a 6-digit OTP.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.2973;0.30541;0.43784;0.44595;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#ffffff" stroke="#c77700" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#c77700"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">4</text><text x="82" y="413" font-size="14" fill="#1d1d1f">Account asks Integration to email the OTP. In production this is SMTP; locally it is captured.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.44595;0.45405;0.58649;0.59459;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#ffffff" stroke="#6f4be8" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#6f4be8"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">5</text><text x="82" y="413" font-size="14" fill="#1d1d1f">Integration records the message in the local outbox: nothing leaves the machine.</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.59459;0.6027;0.73514;0.74324;1" dur="14.8s" repeatCount="indefinite" /></g>
+<g opacity="0"><rect x="30" y="388" width="1140" height="40" rx="12" fill="#ffffff" stroke="#2a9d4b" stroke-opacity=".7"/><circle cx="58" cy="408" r="12" fill="#2a9d4b"/><text x="58" y="412.5" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">6</text><text x="82" y="413" font-size="14" fill="#1d1d1f">The user reads the code in the mailbox page, verifies, and receives a signed JWT (role in the claims).</text><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.74324;0.75135;0.88378;0.89189;1" dur="14.8s" repeatCount="indefinite" /></g>
+</svg>

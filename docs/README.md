@@ -10,7 +10,7 @@ Everything needed to run, seed, test and present the project on one machine.
 | `seeder/` | `seed.mjs` fills the system through the real APIs; `data/` holds people, catalogue, clinical and community content and the offline translation dictionary |
 | `tests/` | `e2e.mjs`: UI end-to-end checks in headless Chrome |
 | `diagrams/` | Animated architecture and flow diagrams (SVG + GIF) and their generator |
-| `showcase/` | Portfolio site (`site/`), screenshot tour (`tools/tour.mjs`), statistics collector |
+| `showcase/` | Slide presentation (`deck/`), screenshot tour (`tools/tour.mjs`), statistics collector |
 
 ## Typical sessions
 
@@ -19,7 +19,7 @@ Everything needed to run, seed, test and present the project on one machine.
 ./docs/runner.sh 3                     # just start the stack again (data is kept in the Docker volume)
 node docs/tests/e2e.mjs                # verify the UI end to end
 node docs/showcase/tools/tour.mjs      # recapture every screenshot
-cd docs/showcase && npm start          # portfolio site on http://localhost:4000
+cd docs/showcase && npm start          # presentation on http://localhost:4000
 node docs/diagrams/build.mjs && node docs/diagrams/render-gifs.mjs   # regenerate diagrams
 ```
 

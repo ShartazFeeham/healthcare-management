@@ -10,8 +10,8 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const OUT = join(HERE, "../site/assets/shots");
-mkdirSync(OUT, { recursive: true }); mkdirSync(join(HERE, "../site/data"), { recursive: true });
+const OUT = join(HERE, "../deck/resources/site/assets/shots");
+mkdirSync(OUT, { recursive: true }); mkdirSync(join(HERE, "../deck/resources/site/data"), { recursive: true });
 const BASE = "http://localhost:3100";
 const only = process.argv[2];
 const seed = JSON.parse(readFileSync(join(HERE, "../../seeder/last-run.json")));
@@ -35,7 +35,7 @@ const pageFor = async (role) => {
 };
 
 let manifest = [];
-try { manifest = JSON.parse(readFileSync(join(HERE, "../site/data/shots.json"), "utf8")); } catch { /* first run */ }
+try { manifest = JSON.parse(readFileSync(join(HERE, "../deck/resources/site/data/shots.json"), "utf8")); } catch { /* first run */ }
 const byId = new Map(manifest.map((m) => [m.id, m]));
 
 for (const scene of SCENES) {
@@ -56,5 +56,5 @@ for (const scene of SCENES) {
   await p.setViewport(1440, 900, 1.5).catch(() => {});
 }
 const order = new Map(SCENES.map((s, i) => [s.id, i]));
-writeFileSync(join(HERE, "../site/data/shots.json"), JSON.stringify([...byId.values()].sort((a, b) => (order.get(a.id) ?? 999) - (order.get(b.id) ?? 999)), null, 1));
+writeFileSync(join(HERE, "../deck/resources/site/data/shots.json"), JSON.stringify([...byId.values()].sort((a, b) => (order.get(a.id) ?? 999) - (order.get(b.id) ?? 999)), null, 1));
 await browser.close();

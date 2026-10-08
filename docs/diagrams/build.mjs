@@ -5,7 +5,7 @@ import { Diagram, C } from "./lib.mjs";
 import { writeFileSync } from "node:fs";
 
 const meta = {};
-const out = (name, d) => { writeFileSync(new URL(`./${name}.svg`, import.meta.url), d.svg()); meta[name] = { dur: d.dur, w: d.w, h: d.h }; console.log("wrote", name + ".svg", d.dur + "s"); };
+const out = (name, d) => { writeFileSync(new URL(process.env.OUT ? `${process.env.OUT}/${name}.svg` : `./${name}.svg`, import.meta.url), d.svg()); meta[name] = { dur: d.dur, w: d.w, h: d.h }; console.log("wrote", name + ".svg", d.dur + "s"); };
 // Ambient loops use durations that divide the 7.2 s loop, so the GIF repeats seamlessly.
 const snap = (x) => [1.2, 1.8, 2.4, 3.6].reduce((a, b) => (Math.abs(b - x) < Math.abs(a - x) ? b : a));
 
@@ -178,4 +178,4 @@ story("flow-runner", "One command to a working system", "docs/runner.sh · every
    { edge: "e6", to: "ts", color: C.green, caption: "An end-to-end suite drives the UI in headless Chrome and verifies the effects through the APIs." },
    { edge: "e7", to: "sh", color: C.pink, caption: "A tour captures every screen for the showcase site." }]);
 
-writeFileSync(new URL("./meta.json", import.meta.url), JSON.stringify(meta, null, 1));
+if (!process.env.OUT) writeFileSync(new URL("./meta.json", import.meta.url), JSON.stringify(meta, null, 1));
